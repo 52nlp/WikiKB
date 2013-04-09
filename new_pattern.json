@@ -1,0 +1,20 @@
+{
+    "patterns": [
+        {
+            "$2": "PERSON|AUTHOR",
+            "pattern": [
+                " was authored by "
+            ],
+            "relation": "writtenBy",
+            "$1": "BOOK"
+        },
+        {
+            "$2": "PERSON|ENTREPRENUER",
+            "pattern": [
+                " was founded by "
+            ],
+            "relation": "foundedBy",
+            "$1": "ORGANIZATION"
+        }
+    ]
+}

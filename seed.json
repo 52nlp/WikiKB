@@ -1,0 +1,32 @@
+{
+    "seeds":[
+        {
+            "relation":"writtenBy",
+            "seed1":"A Christmas Carol",
+            "seed2":"Charles Dickens",
+            "$1":"BOOK",
+            "$2":"PERSON|AUTHOR"
+        },
+        {
+            "relation":"foundedBy",
+            "seed1":"Microsoft",
+            "seed2":"Bill Gates",
+            "$1":"ORGANIZATION",
+            "$2":"PERSON|ENTREPRENUER"
+        },
+        {
+            "relation":"starredIn",
+            "seed1":"Shahrukh Khan",
+            "seed2":"Om Shanti Om",
+            "$1":"PERSON",
+            "$2":"MOVIE"
+        },
+        {
+            "relation":"locatedIn",
+            "seed1":"New York",
+            "seed2":"United States",
+            "$1":"LOCATION",
+            "$2":"LOCATION"
+        }
+    ]
+}

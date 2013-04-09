@@ -1,0 +1,39 @@
+{
+    "patterns":[
+        {
+           "pattern":"$1 is a $2",
+    	   "$1": "ENTITY",
+    	   "$2":"ENTITY",
+    	   "relation":"isA",
+           "example":"Orange is a fruit"
+        },
+        {
+    	   "pattern":"$1 also known as $2",
+    	   "$1":"ENTITY",
+    	   "$2":"ENTITY",
+    	   "relation":"aka",
+           "example":"Microsoft Office is also known as MS Office"
+        },
+        {
+            "pattern":"$1 ~ born ?on ~ $2",
+            "$1":"PERSON",
+            "$2":"DATE",
+            "relation":"bornOn",
+            "example":"Bill Gates was born on October 28, 1955"
+        },
+        {
+            "pattern":"$1 died on $2",
+            "$1":"PERSON",
+            "$2":"DATE",
+            "relation":"diedOn",
+            "example":"Albert Einstein died on April 18, 1955"
+        },
+        {
+            "pattern":"$1 starred in $@",
+            "$1":"PERSON",
+            "$@":"[MOVIE]+",
+            "relation":"starredIn",
+            "example":"Sharukh khan starred in Om Shanti Om, Billu Barber, and Kuch Kuch Hota Hai"
+        }
+    ]
+}

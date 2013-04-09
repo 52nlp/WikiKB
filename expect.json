@@ -1,0 +1,26 @@
+{
+	"expectations":[
+		{
+			"patterns":[
+				"[$BOOK]+ [written by] [$AUTHOR|$PERSON]",
+				"[$AUTHOR|$PERSON] [wrote] [$BOOK]+"
+			],
+			"relations":[
+				"writtenBy($BOOK,$AUTHOR)",
+				"writtenBy($BOOK,$PERSON)",
+				"isA($PERSON,bookWriter)"
+			]
+			
+		}
+	],
+
+	"exprimental":
+		{
+			"patterns":[
+				"[$PERSON_1] is?( also )known as [$PERSON_2]"
+			],
+			"relations":[
+				"aka($PERSON_1,$PERSON_2)"
+			]
+		}
+}

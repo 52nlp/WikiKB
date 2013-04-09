@@ -1,0 +1,19 @@
+{
+	"rules":[
+		{
+			"match":"starredIn($1,$2)",
+			"inference":"person(S1)",
+			"infernece":"movie($2)"
+		},
+		{
+			"match":"writtenBy($1,$2)",
+			"inference":"person($2)",
+			"inference":"book($1)"
+		},
+		{
+			"match":"foundedBy($1,$2)",
+			"inference":"person($2)",
+			"inference":"comapany($1)"
+		}
+	]
+}
