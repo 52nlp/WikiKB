@@ -1,0 +1,25 @@
+{
+    "ISLANDS": {
+        "matches": [
+            {
+                "url": "http://en.wikipedia.org/wiki/Cape_Breton_Island",
+                "match": [
+                    "Cape Breton Island (- formerly \"Ile Royale\", Scottish Gaelic: \"Ceap Breatainn\" or \"Eilean Cheap Bhreatainn\", Mikmaq: \"Unamakika\", simply: \"Cape Breton\") is an island on the Atlantic coast of North America."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Geography_of_Dominica",
+                "match": [
+                    "Dominica is an island in the Caribbean Sea, located about halfway between the French islands of Guadeloupe (to the north) and Martinique (to the south)."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Cyprus",
+                "match": [
+                    "Cyprus (, \"Kypros\",;,), officially the Republic of Cyprus (, \"Kypriaki Dimokratia\",;,), is an island country in the Eastern Mediterranean Sea, east of Greece, south of Turkey, west of Syria, Lebanon, northwest of Israel and north of Egypt."
+                ]
+            }
+        ],
+        "total": 3
+    }
+}

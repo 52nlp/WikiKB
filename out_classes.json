@@ -1,0 +1,79 @@
+{
+    "AUTHOR": {
+        "matches": [
+            {
+                "url": "http://en.wikipedia.org/wiki/August_Derleth",
+                "match": [
+                    "August William Derleth (February 24, 1909  July 4, 1971) was an American writer and anthologist."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bram_Stoker",
+                "match": [
+                    "Abraham \"Bram\" Stoker (8 November 1847  20 April 1912) was an Irish novelist and short story writer, best known today for his 1897 Gothic novel \"Dracula\"."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Alvin_Toffler",
+                "match": [
+                    "Alvin Toffler (born October 4, 1928) is an American writer and futurist, known for his works discussing the digital revolution, communication revolution, corporate revolution and technological singularity."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Aldous_Huxley",
+                "match": [
+                    "Aldous Leonard Huxley (26 July 1894  22 November 1963) was an English writer and one of the most prominent members of the famous Huxley family."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Anne_Bront%C3%AB",
+                "match": [
+                    "Anne Bronte (; 17 January 1820  28 May 1849) was a British novelist and poet, the youngest member of the Bronte literary family."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Alfred_Jarry",
+                "match": [
+                    "Alfred Jarry (8 September 1873  1 November 1907) was a French writer born in Laval, Mayenne, France, not far from the border of Brittany; he was of Breton descent on his mother's side."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Emily_Bront%C3%AB",
+                "match": [
+                    "Emily Jane Bronte (; 30 July 1818  19 December 1848) was an English novelist and poet, best remembered for her solitary novel, \"Wuthering Heights\", now considered a classic of English literature."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Ernest_Thayer",
+                "match": [
+                    "Ernest Lawrence Thayer (August 14, 1863  August 21, 1940) was an American writer and poet who wrote \"Casey at the Bat,\" \"the single most famous baseball poem ever written\" according to the Baseball Almanac, and \"the nations best-known piece of comic versea ballad that began a native legend as colorful and permanent as that of Johnny Appleseed or Paul Bunyan."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB",
+                "match": [
+                    "Charlotte Bronte (; 21 April 1816  31 March 1855) was an English novelist and poet, the eldest of the three Bronte sisters who survived into adulthood, whose novels are English literature standards."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Ennius",
+                "match": [
+                    "Quintus Ennius (c. 239  c. 169 BC) was a writer during the period of the Roman Republic, and is often considered the father of Roman poetry."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Charles_Dickens",
+                "match": [
+                    "Charles John Huffam Dickens (; 7 February 1812  9 June 1870) was an English writer and social critic."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Charles_McCarry",
+                "match": [
+                    "Charles McCarry (born 1930 Massachusetts, USA) is an American writer primarily of spy fiction."
+                ]
+            }
+        ],
+        "total": 12
+    }
+}

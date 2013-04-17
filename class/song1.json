@@ -1,0 +1,19 @@
+{
+    "SONG": {
+        "matches": [
+            {
+                "url": "http://en.wikipedia.org/wiki/Ballad_of_the_Green_Berets",
+                "match": [
+                    "\"The Ballad of the Green Berets\" is a patriotic song in the ballad style about the Green Berets, an elite special force in the U.S. Army."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bj%C3%B6rn_Ulvaeus",
+                "match": [
+                    "Bjorn Kristian Ulvaeus (; born 25 April 1945) is a Swedish songwriter, composer, musician, writer, producer, a former member of the Swedish musical group ABBA (197283), and co-composer of the musicals \"Chess\", \"Kristina fran Duvemala\", and \"Mamma Mia!\"."
+                ]
+            }
+        ],
+        "total": 2
+    }
+}

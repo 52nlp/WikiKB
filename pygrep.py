@@ -20,6 +20,7 @@ def matched(pat_and,pat_or,pat_not,lin):
 		for pat in pat_or:
 			m = re.search(pat,lin)
 			if m:
+				#print lin
 				pat_or_flag = True
 				break
 

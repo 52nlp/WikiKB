@@ -1,0 +1,87 @@
+{
+	"classes":[
+		{
+			"name":"BOOK",
+			"type": "REGEXPATTERN",
+			"start":0,
+			"end":2,
+			"pattern-or":[
+				"is (a|an)(.*)(nove[l|la]|book)(.*)(of|by)"
+			],
+			"pattern-and":[
+
+			],
+			"pattern-not":[
+				"is (a|an)(.*)(inspired|based).*(nove[l|la]|book)(.*)(of|by)"
+			]
+		},
+		{
+			"name":"PERSON",
+			"type":"REGEXPATTERN",
+			"start":0,
+			"end":2,
+			"pattern-or":[
+				"\\(.*born.*\\)",
+				"\\(.*[0-9]{4}.*-.*[0-9]{4}.*\\)"
+			],
+			"pattern-not":[
+			],
+			"pattern-and":[
+			]
+		},
+		{
+			"name":"SONG",
+			"type":"REGEXPATTERN",
+			"start":0,
+			"end":2,
+			"pattern-or":[
+				"is a song",
+				"song by"
+			],
+			"pattern-not":[
+			],
+			"pattern-and":[
+			]
+		},
+		{
+			"name":"LOCATION",
+			"type":"REGEXPATTERN",
+			"start":0,
+			"end":2,
+			"pattern-or":[
+				"is a.*( state | country | county | city | [i|I]slan[d|ds] | town )"
+			],
+			"pattern-not":[
+			],
+			"pattern-and":[
+			]
+		},
+		{
+			"name":"AUTHOR",
+			"type":"REGEXPATTERN",
+			"start":0,
+			"end":2,
+			"pattern-or":[
+				"is a.*( writer| novelist)"
+			],
+			"pattern-not":[
+				"is (a|an)(.*)(nove[l|la]|book)(.*)(of|by)"
+			],
+			"pattern-and":[
+			]
+		},
+		{
+			"name":"ISLANDS",
+			"type":"REGEXPATTERN",
+			"start":0,
+			"end":2,
+			"pattern-or":[
+				"is an [i|I]slan[d|ds]"
+			],
+			"pattern-not":[
+			],
+			"pattern-and":[
+			]
+		}
+	]
+}

@@ -1,0 +1,20 @@
+# ""
+
+START n=node:nodes(name="Bill_Gates")
+MATCH n-[r]->a<-[r1]-b
+WHERE r.rel = "livesIn"
+RETURN n.name, r.rel, a.name, r1.rel, b.name;
+
+#
+
+START n=node:nodes(name="Bill_Gates")
+MATCH n-[r]->a<-[r1]-b<-[r2]-c
+WHERE r.rel = "livesIn" and r2.rel = "livesIn"
+RETURN n.name, r.rel, a.name, r1.rel, b.name, r2.rel, c.name;
+
+#
+
+START n=node:nodes(name="Charles_Dickens")
+MATCH n-[r]->a-[r1]->b<-[r2]-c
+WHERE r.rel = "created"
+RETURN n.name, r.rel, a.name, r1.rel, b.name, r2.rel, c.name;
