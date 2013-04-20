@@ -5,7 +5,7 @@ import marisa_trie
 
 #persons = [u'Charles Dickens',u'Bill Gates']
 #test_trie = marisa_trie.Trie(persons)
-rubbish = [",",".",";"]
+
 
 def toLowerCase(arr):
 	temp = []
@@ -15,6 +15,7 @@ def toLowerCase(arr):
 
 
 def removeRubbish(grams):
+	rubbish = [",",".",";"]
 	ngrams = []
 	for one in grams:
 		one = one.strip()
@@ -29,43 +30,74 @@ def removeRubbish(grams):
 
 	return ngrams
 
+def sortByLength(arr):
+	for i in range(len(arr)-1):
+		for j in range(i+1,len(arr)):
+			if len(arr[i]) < len(arr[j]):
+				arr[i],arr[j] = arr[j],arr[i]
+	return arr
+
 def annotate(sent,trie):
 	onegrams = sent.split(" ")
 	onegrams = removeRubbish(onegrams)
 	sent = " ".join(onegrams)
 	#print sent
 	#print onegrams
-
-	for i in range(len(onegrams)-1):
+	i = 0
+	while i < len(onegrams)-1:
+		found = 0
 		st = onegrams[i].lower().strip() + " " +onegrams[i+1].lower().strip()
 		st = unicode(st,errors="ignore")
 		#print "key",st
 		if st in trie:
-			print "found = ",st
+			print "#################found_whole = ",st
+			found = 1
+			i += 1
 		else:
+			#print "String searching for = ",st
 			tk = trie.keys(st)
 
-			if len(tk):
+			if len(tk) > 0:
 				#print tk
 				length = i-len(onegrams[i])
 				#print onegrams[i]
 				#print i
 				for k in range(i+1):
 					length += len(onegrams[k])
+
+				tk = sortByLength(tk)
+				
+
 				for tk_i in tk:
-					#print tk_i
+					#print "key = ",tk_i
+					prev = ""
 					n_st = sent[length:length+len(tk_i)]
 					n_st = unicode(n_st,errors="ignore")
-				#print n_st
-				
-				if n_st in trie:
-					print n_st
-					i = i+ len(n_st.split(" "))
+					#print "FINDING = ",n_st
+					n_st = n_st
+					if n_st in trie and len(n_st) > len(prev):
+						print "#################found = ",n_st
+						prev = n_st[:]
+						found = 1
+						i = i+ len(n_st.split(" "))
+						break
+		
+		#print found, i
+		if found == 0:
+			arr2 = st.strip().split(" ")
+			if arr2[0] in trie:
+				print "#################found_single_0 = ",arr2[0]
+
+			if i == len(onegrams) - 2:
+				if st.split(" ")[1] in trie:
+					print "#################found_single_1 = ",st.split(" ")[1]
+			i += 1
 		#if one word in in the trie?
+					
 
 def main():
-	books = [u"A Christmas Carol",u"The Cricket on the Hearth",u"English writer Charles Dickens"]
-	#books = [u"A Christmas Carol",u"A Christmas Carol",u"The Cricket on the Hearth",u"English writer Charles Dickens"]
+	books = [u"A Christmas Carol",u"A Christmas Caroll",u"The Cricket on the Hearth",u"English writer Charles Dickens",u"Gates",u"Carol",u"hearth"]
+	#books = [u"A Christmas Carol",u"The Cricket on the Hearth",u"English writer Charles Dickens"]
 
 	books = toLowerCase(books)
 
@@ -87,9 +119,15 @@ def main():
 	ptrie = marisa_trie.Trie()
 	ptrie.load("person.marisa")
 
-	sent = "English writer Charles Dickens wrote A Christmas Carol, The Chimes, The Cricket on the Hearth and several other books."
+	sent = "Bill Gates shahrukh khan English writer Charles Dickens wrote A Christmas Caroll, The Chimes, The Cricket on the Hearth and several other books Gates."
 
-	annotate(sent,btrie)
+	annotate(sent,ptrie)
 
 
-main()
+if __name__ == '__main__':
+	main()
+
+	ptrie = marisa_trie.Trie()
+	ptrie.load("person.marisa")
+	if u"a" in ptrie:
+		print "true"

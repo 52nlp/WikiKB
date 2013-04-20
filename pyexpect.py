@@ -1,37 +1,30 @@
 import sys
 import re
 import json
-import dawg
+import marisa_trie
 
-persons = [u'Charles Dickens',u'Bill Gates']
-person_dawg = dawg.DAWG(persons)
-books = [u'A christmas carol',u'Alchemist']
-book_dawg = dawg.DAWG(books)
+DEBUG = 1
 
-trie = {"$BOOK":book_dawg,"$PERSON":person_dawg}
+#read the json file
+def readJson():
+	expect_file = open("expect.json","r")
+	expect_json = json.load(expect_file)
+	expect = expect_json["expectations"]
+	return expect
 
-sent = "English writer Charles Dickens wrote A Christmas Carol, The Chimes, The Cricket on the Hearth and several other books."
-
-j_file = open("expect.json","r")
-e_json = json.load(j_file)
-
-expectaions = e_json['expectations']
-
-def search(patterns,start,end,line):
-	for i in range(start,end):
-		pass
-
+#main function
 def main():
-	for expect in expectaions:
-		for pat in expect["patterns"]:
-			pats = pat.split(" ")
-			for p in pats:
-				if not p[1] == "$":
-					if re.search(p[1:len(p)],sent):
-						index = pats.index(p)
-						left = search(pats,0,index,sent)
-						right = search(pats,index,len(pats),sent)
-					else:
-						break
-				else:
-					pass
+	exp = readJson()
+	if DEBUG:
+		print "json object = ",exp
+
+	for exp_one in exp:
+		if DEBUG:
+			print "first element = ",exp_one
+		patterns = exp_one["patterns"]
+		if DEBUG:
+			print "patterns = ",patterns
+
+
+if __name__ == '__main__':	
+	main()
