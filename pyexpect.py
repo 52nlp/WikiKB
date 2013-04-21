@@ -5,6 +5,27 @@ import marisa_trie
 import pyannotate
 
 DEBUG = 0
+tries_all = {}
+
+def trim(pat):
+	pat_new = []
+	for p in pat:
+		pat_new.append(p.strip())
+	return pat_new
+
+def initTries(trie_dict):
+	for k,v in trie_dict.iteritems():
+		v_arr = []
+		for value in v:
+			v_arr.append(unicode(value,errors="ignore"))
+
+		v_arr = pyannotate.toLowerCase(v_arr)
+		tries_all[unicode(k,errors="ignore")] = marisa_trie.Trie(v_arr)
+	#print tries_all
+
+#get trie based on the pattern
+def getTrie(key):
+	return tries_all[key]
 
 #read the json file
 def readJson():
@@ -43,7 +64,7 @@ def partition(sent,patterns):
 				pat = patterns[i].strip()
 				pat = pat[1:l]
 
-				print pat
+				#print pat
 
 				start,end = getIndices(sent,pat)
 				if start > -1:
@@ -56,6 +77,51 @@ def partition(sent,patterns):
 
 		if regexPattern == 0:
 			return [sent]
+
+#annotate for OR operator
+def annotateOR(part,pat,oneORmore):
+	#print part
+	annotations = []
+	pats = pat.split("|")
+	for p in pats:
+		if p[0] in ["$","@"]:
+			p = p[1:]
+		#print p
+		try:
+			trie = getTrie(p)
+			annotations += pyannotate.annotate(part,trie,oneORmore)
+		except:
+			print "No " + p + " class found" 
+
+	return annotations
+
+
+#annotate and find relations
+def findRelations(parts,patterns):
+	for i in range(len(patterns)):
+		if patterns[i][1] in ["$","@"] and not parts[0] == "":
+			oneORmore = 1
+
+			l = len(patterns[i].strip()) - 2
+			if patterns[i][l+1] == "]":
+				oneORmore = 0
+				l += 1
+
+			pat = patterns[i].strip()
+			pat = pat[2:l]
+
+			#print pat,i, parts[i]
+			if pat.find("|") > -1:
+				annotations = annotateOR(parts[i].strip(),pat,oneORmore)
+				print annotations
+			else:
+				try:
+					trie = getTrie(pat)
+					annotations = pyannotate.annotate(parts[i].strip(),trie,oneORmore)
+					print annotations
+				except:
+					print "No " + pat + " class found"  
+
 
 #init function
 def extract_init(sent,classes):
@@ -76,27 +142,36 @@ def extract_init(sent,classes):
 
 		patterns = exp_one["patterns"]
 
-		if DEBUG == 0:
+		if DEBUG:
 			print "patterns = ",patterns
 
 		for pattern in patterns:
 			pat = pattern.split(",")
-			print partition(sent,pat)
+			pat = trim(pat)
+			parts =  partition(sent,pat)
+
+			#print parts
+
+			findRelations(parts,pat)
 
 if __name__ == '__main__':	
 	sent = "Charles Dickens wrote books like A Christmas Carol, Anthony and Mayan, A Chritmas Carol"
 	sent1 = "hello from book me to kill me"
-	persons = [u"Charles Dickens"]
-	books = [u"A Christmas Carol",u"Anthony",u"Mayan"]
+	
+	persons = ["Charles Dickens"]
+	books = ["A Christmas Carol","Anthony","Mayan"]
+
+	tries = {"PERSON":persons, "BOOK":books}
 
 	#test annotation
 	ptrie = marisa_trie.Trie(pyannotate.toLowerCase(persons))
 	btrie = marisa_trie.Trie(pyannotate.toLowerCase(books))
-	#pyannotate.annotate(sent,ptrie)
+	#pyannotate.annotate(sent,ptrie,1)
 
 	#test pattern indices
 	start,end = getIndices(sent,"[C|c]arol")
 	#print start, end
 
 	#main
-	extract_init(sent1,[persons,books])
+	initTries(tries)
+	extract_init(sent,[persons,books])
