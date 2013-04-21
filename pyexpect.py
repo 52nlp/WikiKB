@@ -4,38 +4,10 @@ import json
 import marisa_trie
 import pyannotate
 import rethinkdb as r
-#from pyinsert_rethink import connect_r, insert_r
+from pyinsert_rethink import connect_r, insert_r
 
 DEBUG = 0
 tries_all = {}
-
-def connect_r(port):
-	return r.connect("localhost",port)
-
-def insert_r(conn,sent,rel,count):
-	bulk = {}
-	if isinstance(rel["e1"],unicode):
-		bulk["e1"] = rel["e1"]
-	else:
-		bulk["e1"] = unicode(rel["e1"],errors="ignore")
-
-	if isinstance(rel["rel"],unicode):
-		bulk["rel"] = rel["rel"]
-	else:
-		bulk["rel"] = unicode(rel["rel"],errors="ignore")
-
-	if isinstance(rel["e2"],unicode):
-		bulk["e2"] = rel["e2"]
-	else:
-		bulk["e2"] = unicode(rel["e2"],errors="ignore")
-
-	if isinstance(sent,unicode):
-		bulk["sent"] = sent
-	else:
-		bulk["sent"] = unicode(sent,errors="ignore")
-		
-
-	r.db("wikikb").table("demo").insert(bulk).run(conn)
 
 def trim(pat):
 	pat_new = []
