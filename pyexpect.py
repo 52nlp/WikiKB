@@ -75,8 +75,10 @@ def partition(sent,patterns):
 				else:
 					return [""]
 
+		#no regex pattern found only class pattern are found
 		if regexPattern == 0:
-			return [sent]
+			mul = len(patterns)
+			return [sent]*mul
 
 #annotate for OR operator
 def annotateOR(part,pat,oneORmore):
@@ -96,8 +98,10 @@ def annotateOR(part,pat,oneORmore):
 	return annotations
 
 
-#annotate and find relations
-def findRelations(parts,patterns):
+#annotate parts
+def createAnnotations(parts,patterns):
+	types = {}
+
 	for i in range(len(patterns)):
 		if patterns[i][1] in ["$","@"] and not parts[0] == "":
 			oneORmore = 1
@@ -110,18 +114,55 @@ def findRelations(parts,patterns):
 			pat = patterns[i].strip()
 			pat = pat[2:l]
 
+
+
 			#print pat,i, parts[i]
 			if pat.find("|") > -1:
 				annotations = annotateOR(parts[i].strip(),pat,oneORmore)
-				print annotations
+				#print annotations
+				types[i] = annotations
 			else:
+				if pat[len(pat)-2] == "_":
+					pat = pat[:len(pat)-2]
 				try:
 					trie = getTrie(pat)
 					annotations = pyannotate.annotate(parts[i].strip(),trie,oneORmore)
-					print annotations
+					#print annotations
+					types[i] = annotations
 				except:
 					print "No " + pat + " class found"  
 
+	return types
+
+#add dummy regex pattern or add dummy class to make the pat same size as parts
+def augumentPat(pat):
+	if not pat[0][1] in ["$","@"]:
+		pat = ["[$DUMMY]"] + pat
+	if not pat[0][1] in ["$","@"]:
+		pat =  pat + ["[$DUMMY]"]
+	
+	prev = pat[0]	
+	i = 0
+	while i < (len(pat) - 1):
+		if (not (pat[i][1] in ["$","@"])) and (not (prev[1] in ["$","@"])):
+			pat = pat[:i] + ["[$DUMMY]"] + pat[i:]
+		prev = pat[i]
+		i += 1
+	return pat
+
+#map relations from annotations and patterns
+def createRelations(annotations,pat,relations):
+	print annotations
+	print pat
+	print relations
+
+	classMap = {}
+
+	for i in range(len(pat)):
+		
+
+
+	return annotations
 
 #init function
 def extract_init(sent,classes):
@@ -141,6 +182,7 @@ def extract_init(sent,classes):
 			print "first element = ",exp_one
 
 		patterns = exp_one["patterns"]
+		relations = exp_one["relations"]
 
 		if DEBUG:
 			print "patterns = ",patterns
@@ -148,15 +190,20 @@ def extract_init(sent,classes):
 		for pattern in patterns:
 			pat = pattern.split(",")
 			pat = trim(pat)
+			pat = augumentPat(pat)
+
 			parts =  partition(sent,pat)
 
-			#print parts
+			#print parts,len(parts)
+			#print pat,len(pat)
 
-			findRelations(parts,pat)
+			if len(parts) == len(pat):
+				annotations = createAnnotations(parts,pat)
+				print createRelations(annotations,pat,relations)
 
 if __name__ == '__main__':	
 	sent = "Charles Dickens wrote books like A Christmas Carol, Anthony and Mayan, A Chritmas Carol"
-	sent1 = "hello from book me to kill me"
+	sent1 = "hello from book A Christmas Carol, Anthony to kill me"
 	
 	persons = ["Charles Dickens"]
 	books = ["A Christmas Carol","Anthony","Mayan"]

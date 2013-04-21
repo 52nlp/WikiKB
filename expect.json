@@ -6,12 +6,13 @@
 				"[$AUTHOR|$PERSON],[wrote],[$BOOK]+"
 			],
 			"relations":[
-				"writtenBy($BOOK,$AUTHOR)",
-				"writtenBy($BOOK,$PERSON)",
-				"isA($PERSON,bookWriter)"
+				"$BOOK--writtenBy--$AUTHOR",
+				"$BOOK--writtenBy--$PERSON",
+				"$PERSON--isA--bookWriter"
 			]
 			
 		}
+		
 	],
 
 	"exprimental":[
@@ -20,17 +21,17 @@
 				"[$PERSON_1] is?( also )known as [$PERSON_2]"
 			],
 			"relations":[
-				"aka($PERSON_1,$PERSON_2)"
+				"$PERSON_1--aka--$PERSON_2"
 			]
 		},
 		{
 			"patterns":[
-				"[from],[$BOOK],[to],[$AUTHOR|$PERSON]"
+				"[$BOOK],[from],[book],[$BOOK_1]+,[to],[$AUTHOR|$PERSON]"
 			],
 			"relations":[
-				"writtenBy($BOOK,$AUTHOR)",
-				"writtenBy($BOOK,$PERSON)",
-				"isA($PERSON,bookWriter)"
+				"$BOOK--writtenBy--$AUTHOR",
+				"$BOOK--writtenBy--$PERSON",
+				"$PERSON--isA--bookWriter"
 			]
 			
 		}

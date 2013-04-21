@@ -37,21 +37,27 @@ def sortByLength(arr):
 				arr[i],arr[j] = arr[j],arr[i]
 	return arr
 
-def annotate(sent,trie):
+def annotate(sent,trie,oneORmore):
 	onegrams = sent.split(" ")
 	onegrams = removeRubbish(onegrams)
 	sent = " ".join(onegrams)
+
+	annotations = []
 	#print sent
 	#print onegrams
 	i = 0
-	while i < len(onegrams)-1:
+	foundAtLeatOne = 0
+	while i < len(onegrams) - 1:
+		#print "iteration = ",i
 		found = 0
 		st = onegrams[i].lower().strip() + " " +onegrams[i+1].lower().strip()
 		st = unicode(st,errors="ignore")
 		#print "key",st
 		if st in trie:
-			print "#################found_whole = ",st
+			#print "#################found_whole = ",st
+			annotations.append(st)
 			found = 1
+			foundAtLeatOne = 1
 			i += 1
 		else:
 			#print "String searching for = ",st
@@ -76,23 +82,40 @@ def annotate(sent,trie):
 					#print "FINDING = ",n_st
 					n_st = n_st
 					if n_st in trie and len(n_st) > len(prev):
-						print "#################found = ",n_st
+						#print "#################found = ",n_st
+						annotations.append(n_st)
 						prev = n_st[:]
 						found = 1
+						foundAtLeatOne = 1
 						i = i+ len(n_st.split(" "))
+						#print i
 						break
 		
 		#print found, i
 		if found == 0:
 			arr2 = st.strip().split(" ")
 			if arr2[0] in trie:
-				print "#################found_single_0 = ",arr2[0]
+				found == 1
+				foundAtLeatOne = 1
+				#print "#################found_single_0 = ",arr2[0]
+				annotations.append(arr2[0])
 
 			if i == len(onegrams) - 2:
+				found == 1
+				foundAtLeatOne = 1
 				if st.split(" ")[1] in trie:
-					print "#################found_single_1 = ",st.split(" ")[1]
+					#print "#################found_single_1 = ",st.split(" ")[1]
+					annotations.append(st.split(" ")[1])
 			i += 1
-		#if one word in in the trie?
+		
+		if found == 1 and not oneORmore:
+			#print "one only"
+			return annotations
+
+	if i == len(onegrams) -1 and (oneORmore or ((not oneORmore) and foundAtLeatOne == 0)):
+		if unicode(onegrams[i].strip(),errors="ignore") in trie:
+			annotations.append(onegrams[i].strip())
+	return annotations
 					
 
 def main():
@@ -100,7 +123,6 @@ def main():
 	#books = [u"A Christmas Carol",u"The Cricket on the Hearth",u"English writer Charles Dickens"]
 
 	books = toLowerCase(books)
-
 	btrie = marisa_trie.Trie(books)
 
 	
@@ -121,13 +143,14 @@ def main():
 
 	sent = "Bill Gates shahrukh khan English writer Charles Dickens wrote A Christmas Caroll, The Chimes, The Cricket on the Hearth and several other books Gates."
 
-	annotate(sent,ptrie)
+	print annotate(sent,ptrie,1)
 
 
 if __name__ == '__main__':
-	main()
+	#main()
 
-	ptrie = marisa_trie.Trie()
-	ptrie.load("person.marisa")
-	if u"a" in ptrie:
-		print "true"
+	s = "A Christmas Carol, Anthony"
+	books = ["A Christmas Carol","Anthony","Mayan"]
+	books = toLowerCase(books)
+	btrie = marisa_trie.Trie(books)
+	print annotate(s,btrie,1)
