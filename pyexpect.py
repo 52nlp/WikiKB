@@ -283,3 +283,4 @@ if __name__ == '__main__':
 	#main
 	initTries(tries)
 	extract_init(sent,[persons,books])
+	
