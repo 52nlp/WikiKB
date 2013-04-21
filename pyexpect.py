@@ -21,6 +21,8 @@ def initTries(trie_dict):
 
 		v_arr = pyannotate.toLowerCase(v_arr)
 		tries_all[unicode(k,errors="ignore")] = marisa_trie.Trie(v_arr)
+	
+	tries_all["PERSON"] = marisa_trie.Trie().load("person.marisa")
 	#print tries_all
 
 #get trie based on the pattern
@@ -205,7 +207,7 @@ def createRelations(annotations,pat,relations):
 				one_relation["e1"] = temp
 		except:
 			print rels[0],"is not found in classMap or annotations"
-			
+
 
 		one_relation["rel"] = rels[1]
 
@@ -257,7 +259,8 @@ def extract_init(sent):
 			if len(parts) == len(pat):
 				annotations = createAnnotations(parts,pat)
 				extracts = createRelations(annotations,pat,relations)
-				print extracts
+				for ex in extracts:
+					print ex
 				#extractions = {}
 				#extractions["extractions"] = extracts
 				#json.dumps(extractions,indent = 4,separators=(',', ': '))
@@ -265,13 +268,13 @@ def extract_init(sent):
 if __name__ == '__main__':	
 	sent = "Charles Dickens wrote books like A Christmas Carol, Anthony and Mayan, A Chritmas Carol"
 	sent1 = "hello from book A Christmas Carol, Anthony to kill me"
-	
-	persons = ["Charles Dickens"]
-	author = ["Charles Dickens"]
+
+	persons = ["Bill Gates"]
+	authors = ["Charles Dickens"]
 	books = ["A Christmas Carol","Anthony","Mayan"]
 
-	tries = {"PERSON":persons, "BOOK":books, "AUTHOR":author}
-
+	trie = {"PERSON":persons, "BOOK":books, "AUTHOR":authors}
+	
 	#test annotation
 	ptrie = marisa_trie.Trie(pyannotate.toLowerCase(persons))
 	btrie = marisa_trie.Trie(pyannotate.toLowerCase(books))
@@ -282,5 +285,6 @@ if __name__ == '__main__':
 	#print start, end
 
 	#main
-	initTries(tries)
+	initTries(trie)
 	extract_init(sent)
+	extract_init(sent1)

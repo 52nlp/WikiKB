@@ -2,12 +2,23 @@
 	"expectations":[
 		{
 			"patterns":[
-				"[$BOOK]+,[written by],[$AUTHOR]",
-				"[$AUTHOR],[wrote],[$BOOK]+"
+				"[$BOOK]+,[written by],[$PERSON]",
+				"[$PERSON],[wrote],[$BOOK]+"
+			],
+			"relations":[
+				"$BOOK--writtenBy--$PERSON",
+				"$PERSON--isA--bookWriter"
+			]
+			
+		},
+		{
+			"patterns":[
+				"[$BOOK],[from],[book],[$BOOK_1]+,[to],[$AUTHOR|$PERSON]"
 			],
 			"relations":[
 				"$BOOK--writtenBy--$AUTHOR",
-				"$AUTHOR--isA--bookWriter"
+				"$BOOK--writtenBy--$PERSON",
+				"$PERSON--isA--bookWriter"
 			]
 			
 		}
