@@ -3,8 +3,8 @@ import re
 import json
 import marisa_trie
 import pyannotate
-import rethinkdb as r
 from pyinsert_rethink import connect_r, insert_r
+from ner import initPattern, findPattern
 
 DEBUG = 0
 tries_all = {}
@@ -97,7 +97,8 @@ def annotateOR(part,pat,oneORmore):
 			trie = getTrie(p)
 			annotations += pyannotate.annotate(part,trie,oneORmore)
 		except:
-			print "No " + p + " class found" 
+			#print "No " + p + " class found" 
+			return False,None
 
 	return annotations
 
@@ -118,31 +119,37 @@ def createAnnotations(parts,patterns):
 			pat = patterns[i].strip()
 			pat = pat[2:l]
 
-
-
-			#print pat,i, parts[i]
-			if pat.find("|") > -1:
-				annotations = annotateOR(parts[i].strip(),pat,oneORmore)
-				#print annotations
-				if len(annotations) == 0:
-					ok = False
-				types[i] = annotations
-			else:
-				if pat[len(pat)-2] == "_":
+			if patterns[i][1] == "@":
+				print pat
+				if pat.find("_") > -1:
 					pat = pat[:len(pat)-2]
-				try:
-					#print pat
-					#print parts[i].strip()
-					trie = getTrie(pat)
-					annotations = pyannotate.annotate(parts[i].strip(),trie,oneORmore)
-					#print "createAnnotations",annotations
+				pats = initPattern()
+  				res = findPattern(parts[i].strip(),pats,pat)
+				types[i] = res
+			else:
+				#print pat,i, parts[i]
+				if pat.find("|") > -1:
+					annotations = annotateOR(parts[i].strip(),pat,oneORmore)
+					#print annotations
 					if len(annotations) == 0:
 						ok = False
-					#print annotations
 					types[i] = annotations
-				except:
-					#print "No " + pat + " class found"  
-					return False,None
+				else:
+					if pat[len(pat)-2] == "_":
+						pat = pat[:len(pat)-2]
+					try:
+						#print pat
+						#print parts[i].strip()
+						trie = getTrie(pat)
+						annotations = pyannotate.annotate(parts[i].strip(),trie,oneORmore)
+						#print "createAnnotations",annotations
+						if len(annotations) == 0:
+							ok = False
+						#print annotations
+						types[i] = annotations
+					except:
+						#print "No " + pat + " class found"  
+						return False,None
 
 	return ok,types
 
@@ -200,7 +207,7 @@ def createRelations(annotations,pat,relations):
 					p = p[1:len(p)-1]
 				classMap[p] = i
 
-	#print "classMap",classMap
+	print "classMap",classMap
 	
 
 	all_relations = []
@@ -268,12 +275,12 @@ def extract_init(sent):
 
 			parts =  partition(sent,pat)
 
-			#print parts,len(parts)
-			#print pat,len(pat)
+			print parts,len(parts)
+			print pat,len(pat)
 
 			if len(parts) == len(pat):
 				ok,annotations = createAnnotations(parts,pat)
-				#print annotations
+				print annotations
 				if not ok:
 					continue
 				ok,extracts = createRelations(annotations,pat,relations)
@@ -327,8 +334,8 @@ if __name__ == '__main__':
 
 	#main
 	initTries(trie)
-	"""
-	sent = "One such presentation to promote Windows 95 had Bill Gates digitally superimposed into the game."
+	
+	sent = "Bill Gates was born in August 14, 1897 - December 14, 1945. He founded Microsoft"
 	extract_init(sent)
 
 	"""
@@ -343,3 +350,4 @@ if __name__ == '__main__':
 			#	print "text: ",txt
 			extract_init(txt)
 	
+	"""

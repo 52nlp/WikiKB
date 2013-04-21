@@ -33,6 +33,23 @@
 				"$PERSON--CEOOf--$COMPANY"
 			]
 			
+		},
+		{
+			"patterns":[
+				"[$PERSON],[born],[@DATE]"
+			],
+			"relations":[
+				"$PERSON--bornOn--@DATE"
+			]
+		},
+		{
+			"patterns":[
+				"[$PERSON],[born],[@DATE],[-],[@DATE_1]"
+			],
+			"relations":[
+				"$PERSON--bornOn--@DATE",
+				"$PERSON--diedOn--@DATE_1"
+			]
 		}
 		
 	],
