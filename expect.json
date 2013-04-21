@@ -6,7 +6,6 @@
 				"[$AUTHOR|$PERSON],[wrote],[$BOOK]+"
 			],
 			"relations":[
-				"$BOOK--writtenBy--$AUTHOR",
 				"$BOOK--writtenBy--$PERSON",
 				"$PERSON--isA--bookWriter"
 			]

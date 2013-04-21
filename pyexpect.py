@@ -150,19 +150,80 @@ def augumentPat(pat):
 		i += 1
 	return pat
 
+#create ralations between multiple e1 and multiple e2
+def breakRelations(all_relations):
+	#print "all_relation", all_relations
+	big_relation_store = []
+	#print all_relations
+	for rel in all_relations:
+		#print "relation",rel
+		for i in range(len(rel["e1"])):
+			for j in range(len(rel["e2"])):
+				big_relation_store.append({"e1":rel["e1"][i], "rel":rel["rel"], "e2":rel["e2"][j]})
+	return big_relation_store
+
 #map relations from annotations and patterns
 def createRelations(annotations,pat,relations):
-	print annotations
-	print pat
-	print relations
+	#print annotations
+	#print pat
+	#print relations
 
 	classMap = {}
 
 	for i in range(len(pat)):
-		
+		if pat[i][1] in ["$","@"]:
+			p = pat[i]
+			if p.find("|") > -1:
+				ps = p.split("|")
+				for ps_i in ps:
+					if ps_i[0] == "[":
+						ps_i = ps_i[1:]
+					elif ps_i[len(ps_i)-1] == "]":
+						ps_i = ps_i[:len(ps_i)-1]
+					classMap[ps_i] = i
+			else:
+				if p[len(p)-1] in ["+"]:
+					p = p[1:len(p)-2]
+				else:
+					p = p[1:len(p)-1]
+				classMap[p] = i
 
+	#print "classMap",classMap
+	all_relations = []
 
-	return annotations
+	for rel in relations:
+		one_relation = {}
+		rels = rel.split("--")
+		try:
+			if rels[0][0] in ["$","@"]:
+				i = classMap[rels[0]]
+				#print i
+				one_relation["e1"] = annotations[i]
+			else:
+				temp = []
+				temp.append(rels[0])
+				one_relation["e1"] = temp
+		except:
+			print rels[0],"is not found in classMap or annotations"
+
+		one_relation["rel"] = rels[1]
+
+		try:
+			if rels[2][0] in ["$","@"]:
+				i = classMap[rels[2]]
+				one_relation["e2"] = annotations[i]
+			else:
+				temp = []
+				temp.append(rels[2])
+				one_relation["e2"] = temp
+		except:
+			print rels[2],"is not found in classMap or annotations"
+
+		all_relations.append(one_relation)
+
+	all_relations = breakRelations(all_relations)
+
+	return all_relations
 
 #init function
 def extract_init(sent,classes):
@@ -199,7 +260,7 @@ def extract_init(sent,classes):
 
 			if len(parts) == len(pat):
 				annotations = createAnnotations(parts,pat)
-				print createRelations(annotations,pat,relations)
+				print "Result",createRelations(annotations,pat,relations)
 
 if __name__ == '__main__':	
 	sent = "Charles Dickens wrote books like A Christmas Carol, Anthony and Mayan, A Chritmas Carol"
