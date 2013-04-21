@@ -188,7 +188,7 @@ def createRelations(annotations,pat,relations):
 					p = p[1:len(p)-1]
 				classMap[p] = i
 
-	#print "classMap",classMap
+	print "classMap",classMap
 	all_relations = []
 
 	for rel in relations:
@@ -205,6 +205,7 @@ def createRelations(annotations,pat,relations):
 				one_relation["e1"] = temp
 		except:
 			print rels[0],"is not found in classMap or annotations"
+			
 
 		one_relation["rel"] = rels[1]
 
@@ -226,13 +227,8 @@ def createRelations(annotations,pat,relations):
 	return all_relations
 
 #init function
-def extract_init(sent,classes):
-	persons = pyannotate.toLowerCase(classes[0])
-	books = pyannotate.toLowerCase(classes[0])
-
-	ptrie = marisa_trie.Trie(persons)
-	btrie = marisa_trie.Trie(books)
-
+def extract_init(sent):
+	
 	exp = readJson()
 	if DEBUG:
 		print "json object = ",exp
@@ -260,16 +256,21 @@ def extract_init(sent,classes):
 
 			if len(parts) == len(pat):
 				annotations = createAnnotations(parts,pat)
-				print "Result",createRelations(annotations,pat,relations)
+				extracts = createRelations(annotations,pat,relations)
+				print extracts
+				#extractions = {}
+				#extractions["extractions"] = extracts
+				#json.dumps(extractions,indent = 4,separators=(',', ': '))
 
 if __name__ == '__main__':	
 	sent = "Charles Dickens wrote books like A Christmas Carol, Anthony and Mayan, A Chritmas Carol"
 	sent1 = "hello from book A Christmas Carol, Anthony to kill me"
 	
 	persons = ["Charles Dickens"]
+	author = ["Charles Dickens"]
 	books = ["A Christmas Carol","Anthony","Mayan"]
 
-	tries = {"PERSON":persons, "BOOK":books}
+	tries = {"PERSON":persons, "BOOK":books, "AUTHOR":author}
 
 	#test annotation
 	ptrie = marisa_trie.Trie(pyannotate.toLowerCase(persons))
@@ -282,5 +283,4 @@ if __name__ == '__main__':
 
 	#main
 	initTries(tries)
-	extract_init(sent,[persons,books])
-	
+	extract_init(sent)

@@ -2,12 +2,12 @@
 	"expectations":[
 		{
 			"patterns":[
-				"[$BOOK]+,[written by],[$AUTHOR|$PERSON]",
-				"[$AUTHOR|$PERSON],[wrote],[$BOOK]+"
+				"[$BOOK]+,[written by],[$AUTHOR]",
+				"[$AUTHOR],[wrote],[$BOOK]+"
 			],
 			"relations":[
-				"$BOOK--writtenBy--$PERSON",
-				"$PERSON--isA--bookWriter"
+				"$BOOK--writtenBy--$AUTHOR",
+				"$AUTHOR--isA--bookWriter"
 			]
 			
 		}
