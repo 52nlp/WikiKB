@@ -3,7 +3,8 @@
 		{
 			"patterns":[
 				"[$BOOK]+,[written by],[$PERSON]",
-				"[$PERSON],[wrote],[$BOOK]+"
+				"[$PERSON],[wrote],[$BOOK]+",
+				"[$BOOK],[by],[$PERSON]"
 			],
 			"relations":[
 				"$BOOK--writtenBy--$PERSON",
@@ -13,12 +14,23 @@
 		},
 		{
 			"patterns":[
-				"[$BOOK],[from],[book],[$BOOK_1]+,[to],[$AUTHOR|$PERSON]"
+				"[$PERSON],[co-founded],[$COMPANY]",
+				"[$COMPANY],[co-founder],[$PERSON]",
+				"[$PERSON],[the founder of],[$COMPANY]",
+				"[$PERSON],[founded],[$COMPANY]",
+				"[$COMPANY],[established on],[$PERSON]+"
 			],
 			"relations":[
-				"$BOOK--writtenBy--$AUTHOR",
-				"$BOOK--writtenBy--$PERSON",
-				"$PERSON--isA--bookWriter"
+				"$PERSON--founded--$COMPANY"
+			]
+			
+		},
+		{
+			"patterns":[
+				"[$COMPANY],[CEO],[$PERSON]"
+			],
+			"relations":[
+				"$PERSON--CEOOf--$COMPANY"
 			]
 			
 		}
@@ -44,6 +56,14 @@
 				"$PERSON--isA--bookWriter"
 			]
 			
+		},
+		{
+			"patterns":[
+				"[$PERSON]"
+			],
+			"relations":[
+				"$PERSON--isA--person"
+			]
 		}
 	]
 }

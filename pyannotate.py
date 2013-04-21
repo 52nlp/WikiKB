@@ -51,7 +51,10 @@ def annotate(sent,trie,oneORmore):
 		#print "iteration = ",i
 		found = 0
 		st = onegrams[i].lower().strip() + " " +onegrams[i+1].lower().strip()
-		st = unicode(st,errors="ignore")
+		if isinstance(st,unicode):
+			pass
+		else:
+			st = unicode(st,errors="ignore")
 		#print "key",st
 		if st in trie:
 			#print "#################found_whole = ",st
@@ -78,7 +81,10 @@ def annotate(sent,trie,oneORmore):
 					#print "key = ",tk_i
 					prev = ""
 					n_st = sent[length:length+len(tk_i)]
-					n_st = unicode(n_st,errors="ignore")
+					if isinstance(n_st,unicode):
+						pass
+					else:
+						n_st = unicode(n_st,errors="ignore")
 					#print "FINDING = ",n_st
 					n_st = n_st
 					if n_st in trie and len(n_st) > len(prev):
@@ -113,7 +119,11 @@ def annotate(sent,trie,oneORmore):
 			return annotations
 
 	if i == len(onegrams) -1 and (oneORmore or ((not oneORmore) and foundAtLeatOne == 0)):
-		if unicode(onegrams[i].strip(),errors="ignore") in trie:
+		if isinstance(onegrams[i].strip(),unicode):
+			og = onegrams[i].strip()
+		else:
+			og = unicode(onegrams[i].strip(),errors="ignore")
+		if og in trie:
 			annotations.append(onegrams[i].strip())
 	return annotations
 					

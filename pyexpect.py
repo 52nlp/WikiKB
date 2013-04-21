@@ -3,9 +3,39 @@ import re
 import json
 import marisa_trie
 import pyannotate
+import rethinkdb as r
+#from pyinsert_rethink import connect_r, insert_r
 
 DEBUG = 0
 tries_all = {}
+
+def connect_r(port):
+	return r.connect("localhost",port)
+
+def insert_r(conn,sent,rel,count):
+	bulk = {}
+	if isinstance(rel["e1"],unicode):
+		bulk["e1"] = rel["e1"]
+	else:
+		bulk["e1"] = unicode(rel["e1"],errors="ignore")
+
+	if isinstance(rel["rel"],unicode):
+		bulk["rel"] = rel["rel"]
+	else:
+		bulk["rel"] = unicode(rel["rel"],errors="ignore")
+
+	if isinstance(rel["e2"],unicode):
+		bulk["e2"] = rel["e2"]
+	else:
+		bulk["e2"] = unicode(rel["e2"],errors="ignore")
+
+	if isinstance(sent,unicode):
+		bulk["sent"] = sent
+	else:
+		bulk["sent"] = unicode(sent,errors="ignore")
+		
+
+	r.db("wikikb").table("demo").insert(bulk).run(conn)
 
 def trim(pat):
 	pat_new = []
@@ -103,7 +133,7 @@ def annotateOR(part,pat,oneORmore):
 #annotate parts
 def createAnnotations(parts,patterns):
 	types = {}
-
+	ok = True
 	for i in range(len(patterns)):
 		if patterns[i][1] in ["$","@"] and not parts[0] == "":
 			oneORmore = 1
@@ -122,19 +152,27 @@ def createAnnotations(parts,patterns):
 			if pat.find("|") > -1:
 				annotations = annotateOR(parts[i].strip(),pat,oneORmore)
 				#print annotations
+				if len(annotations) == 0:
+					ok = False
 				types[i] = annotations
 			else:
 				if pat[len(pat)-2] == "_":
 					pat = pat[:len(pat)-2]
 				try:
+					#print pat
+					#print parts[i].strip()
 					trie = getTrie(pat)
 					annotations = pyannotate.annotate(parts[i].strip(),trie,oneORmore)
+					#print "createAnnotations",annotations
+					if len(annotations) == 0:
+						ok = False
 					#print annotations
 					types[i] = annotations
 				except:
-					print "No " + pat + " class found"  
+					#print "No " + pat + " class found"  
+					return False,None
 
-	return types
+	return ok,types
 
 #add dummy regex pattern or add dummy class to make the pat same size as parts
 def augumentPat(pat):
@@ -190,7 +228,9 @@ def createRelations(annotations,pat,relations):
 					p = p[1:len(p)-1]
 				classMap[p] = i
 
-	print "classMap",classMap
+	#print "classMap",classMap
+	
+
 	all_relations = []
 
 	for rel in relations:
@@ -206,7 +246,8 @@ def createRelations(annotations,pat,relations):
 				temp.append(rels[0])
 				one_relation["e1"] = temp
 		except:
-			print rels[0],"is not found in classMap or annotations"
+			###print rels[0],"is not found in classMap or annotations"
+			return False,None
 
 
 		one_relation["rel"] = rels[1]
@@ -220,13 +261,14 @@ def createRelations(annotations,pat,relations):
 				temp.append(rels[2])
 				one_relation["e2"] = temp
 		except:
-			print rels[2],"is not found in classMap or annotations"
+			###print rels[2],"is not found in classMap or annotations"
+			return False,None
 
 		all_relations.append(one_relation)
 
 	all_relations = breakRelations(all_relations)
 
-	return all_relations
+	return True,all_relations
 
 #init function
 def extract_init(sent):
@@ -246,6 +288,7 @@ def extract_init(sent):
 		if DEBUG:
 			print "patterns = ",patterns
 
+		printSent = 1
 		for pattern in patterns:
 			pat = pattern.split(",")
 			pat = trim(pat)
@@ -257,10 +300,35 @@ def extract_init(sent):
 			#print pat,len(pat)
 
 			if len(parts) == len(pat):
-				annotations = createAnnotations(parts,pat)
-				extracts = createRelations(annotations,pat,relations)
+				ok,annotations = createAnnotations(parts,pat)
+				#print annotations
+				if not ok:
+					continue
+				ok,extracts = createRelations(annotations,pat,relations)
+				#print extracts
+				if not ok:
+					continue
 				for ex in extracts:
+					if printSent == 1:
+						print sent
+						printSent = 0
+					#print annotations
+					#print parts,len(parts)
+					#print pat,len(pat)
 					print ex
+					
+					try:
+						conn = connect_r(36903)
+						try:
+							insert_r(conn,sent,ex,1)
+						except:
+							print "cannot insert values"
+							traceback.print_exc(file=sys.stdout)
+							print "relation inserted"
+					except:
+						print "cannot connect to rethinkdb"
+					
+
 				#extractions = {}
 				#extractions["extractions"] = extracts
 				#json.dumps(extractions,indent = 4,separators=(',', ': '))
@@ -271,9 +339,10 @@ if __name__ == '__main__':
 
 	persons = ["Bill Gates"]
 	authors = ["Charles Dickens"]
-	books = ["A Christmas Carol","Anthony","Mayan"]
+	books = ["A Christmas Carol",""]
+	company = ["Microsoft","Apple Inc","Apple","Mcafee","Amazon.com","Intel","Google","Nvidia","AMD","Oracle","Sun Microsystems"]
 
-	trie = {"PERSON":persons, "BOOK":books, "AUTHOR":authors}
+	trie = {"PERSON":persons, "BOOK":books, "AUTHOR":authors, "COMPANY":company}
 	
 	#test annotation
 	ptrie = marisa_trie.Trie(pyannotate.toLowerCase(persons))
@@ -286,5 +355,19 @@ if __name__ == '__main__':
 
 	#main
 	initTries(trie)
+	"""
+	sent = "One such presentation to promote Windows 95 had Bill Gates digitally superimposed into the game."
 	extract_init(sent)
-	extract_init(sent1)
+
+	"""
+	in_file = open(sys.argv[1],"r")
+	for line in in_file:
+		jline = json.loads(line)
+		url = jline["url"]
+		text = jline["text"]
+		#print "URL: ",url
+		for txt in text:
+			#if txt.find("Steve Jobs") > -1:
+			#	print "text: ",txt
+			extract_init(txt)
+	
