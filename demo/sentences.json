@@ -1,6 +1,8 @@
 {     
-	"demo1":{         
-			"title":"Bill Gates",
-			"text":"Albert Einstein was born in March 14, 1879 - April 18, 1955. Bill Gates founded Microsoft. Charles Dickens wrote A Christmas Carol."
-			}
+	"demo1":[
+				{         
+					"title":"Bill Gates",
+					"text":"Albert Einstein was born in March 14, 1879 - April 18, 1955. Bill Gates founded Microsoft. Charles Dickens wrote A Christmas Carol."
+				}
+			]
 }

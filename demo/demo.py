@@ -3,7 +3,7 @@ import re
 import json
 import marisa_trie
 import pyannotate
-from pyinsert_rethink import connect_r, insert_r, delete_table_r
+#from pyinsert_rethink import connect_r, insert_r, delete_table_r
 from ner import initPattern, findPattern
 import nltk.data
 
@@ -298,7 +298,7 @@ def extract_init(exp,sent,table):
 					#print parts,len(parts)
 					#print pat,len(pat)
 					all_rel.append(ex)
-					
+					"""					
 					try:
 						conn = connect_r(36903)
 						try:
@@ -309,7 +309,7 @@ def extract_init(exp,sent,table):
 							
 					except:
 						print "cannot connect to rethinkdb"
-				
+					"""				
 				yield all_rel
 
 				#extractions = {}
@@ -344,7 +344,7 @@ def main(demo):
 	exp = readJson(demo+".json")
 
 	sent_file = open("sentences.json","r")
-	sent = json.load(sent_file)[demo]
+	sents = json.load(sent_file)[demo]
 	#print sent
 
 	classes_file = open("classes.json","r")
@@ -366,22 +366,28 @@ def main(demo):
 	dot_file.write("digraph G {\n")
 
 	tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
-	sents = tokenizer.tokenize(sent["text"])
-	title = sent["title"]
+	
+	
 
+	"""	
 	#print sents
 	try:
 		conn = connect_r(36903)
 		delete_table_r(conn,demo)
 	except:
 		pass
-
+	"""
 	for sent in sents:
-		sent = resolveRedirection(sent,title)
+
+		title = sent["title"]
+		
 		#print sent
-		for rel in extract_init(patterns,sent,demo):
-			print rel
-			saveToFile(rel,dot_file)
+		texts = tokenizer.tokenize(sent["text"])
+		for text in texts:
+			sent = resolveRedirection(text,title)
+			for rel in extract_init(patterns,text,demo):
+				print rel
+				saveToFile(rel,dot_file)
 
 	dot_file.write("}")
 
