@@ -1,0 +1,127 @@
+{
+    "AUTHOR": {
+        "matches": [
+            {
+                "url": "http://en.wikipedia.org/wiki/Albert_Brooks",
+                "match": [
+                    "Albert Lawrence Brooks (born Albert Lawrence Einstein; July 22, 1947) is an American actor, voice actor, writer, comedian, and director."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bill_Holbrook",
+                "match": [
+                    "Bill Holbrook (born 1958) is an American cartoonist and webcomic writer and artist, best known for his syndicated comic strip \"On the Fastrack\"."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bruce_Campbell",
+                "match": [
+                    "Bruce Lorne Campbell (born June 22, 1958) is an American film and television actor, director, writer, producer and author."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Ann_Widdecombe",
+                "match": [
+                    "Ann Noreen Widdecombe DSG (born 4 October 1947) is a former British Conservative Party politician and has been a novelist since 2000."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Alvin_Toffler",
+                "match": [
+                    "Alvin Toffler (born October 4, 1928) is an American writer and futurist, known for his works discussing the digital revolution, communication revolution, corporate revolution and technological singularity."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bj%C3%B6rn_Ulvaeus",
+                "match": [
+                    "Bjorn Kristian Ulvaeus (; born 25 April 1945) is a Swedish songwriter, composer, musician, writer, producer, a former member of the Swedish musical group ABBA (197283), and co-composer of the musicals \"Chess\", \"Kristina fran Duvemala\", and \"Mamma Mia!\"."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Billy_Crystal",
+                "match": [
+                    "William Edward \"Billy\" Crystal (born March 14, 1948) is an American actor, writer, producer, comedian, and film director."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bj%C3%B8rn_Lomborg",
+                "match": [
+                    "Bjrn Lomborg (; born 6 January 1965) is a Danish author, academic, and environmental writer."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Andrzej_Sapkowski",
+                "match": [
+                    "Andrzej Sapkowski, born 21 June 1948 in odz, is a Polish fantasy writer."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Amanda_Hesser",
+                "match": [
+                    "Amanda Hesser (born 1972) is an American food writer, editor and cookbook author."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Cthulhu_Mythos",
+                "match": [
+                    "The Cthulhu Mythos is a shared fictional universe, based on the work of American horror writer H. P. Lovecraft."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/C._S._Lewis",
+                "match": [
+                    "Clive Staples Lewis (29 November 1898  22 November 1963), commonly called C. S. Lewis and known to his friends and family as \"Jack\", was a novelist, poet, academic, medievalist, literary critic, essayist, lay theologian, and Christian apologist from Belfast, Ireland."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Clive_Anderson",
+                "match": [
+                    "Clive Anderson (born 10 December 1952) is a British former barrister, best known for being a comedy writer as well as a radio and television presenter in the United Kingdom."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Don_Rosa",
+                "match": [
+                    "Keno Don Hugo Rosa, known simply as Don Rosa, (born June 29, 1951) is an American comic book writer and illustrator known for his stories about Scrooge McDuck, Donald Duck and other Disney characters."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Daniel_Dennett",
+                "match": [
+                    "Daniel Clement \"Dan\" Dennett III (born March 28, 1942) is an American philosopher, writer and cognitive scientist whose research centers on the philosophy of mind, philosophy of science and philosophy of biology, particularly as those fields relate to evolutionary biology and cognitive science."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Dave_Winer",
+                "match": [
+                    "Dave Winer (born May 2, 1955 in Brooklyn, New York City) is an American software developer, entrepreneur and writer in New York City."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Denis_Leary",
+                "match": [
+                    "Denis Colin Leary (born August 18, 1957) is an American actor, comedian, writer, director and film producer."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Charles_McCarry",
+                "match": [
+                    "Charles McCarry (born 1930 Massachusetts, USA) is an American writer primarily of spy fiction."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Chaim_Topol",
+                "match": [
+                    "Chaim Topol (; born September 9, 1935), often billed simply as Topol, is an Israeli theatrical and film performer, actor, writer and producer."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Colin_Dexter",
+                "match": [
+                    "Norman Colin Dexter, OBE, (born 29 September 1930) is an English crime writer, known for his Inspector Morse novels which were written between 1975 and 1999 and adapted as a television series from 1987 to 2000."
+                ]
+            }
+        ],
+        "total": 20
+    }
+}

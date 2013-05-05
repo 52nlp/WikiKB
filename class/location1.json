@@ -1,0 +1,793 @@
+{
+    "LOCATION": {
+        "matches": [
+            {
+                "url": "http://en.wikipedia.org/wiki/Andersonville%2C_Georgia",
+                "match": [
+                    "Andersonville is a city in Sumter County, Georgia, United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Aswan",
+                "match": [
+                    "Aswan (; '; Ancient Egyptian: '; Coptic: ', '), formerly spelled \"Assuan\", is a city in the south of Egypt, the capital of the Aswan Governorate."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Abano_Terme",
+                "match": [
+                    "Abano Terme (known as \"Abano Bagni\" until 1930) is a town and \"comune\" in the province of Padua, in the Veneto region, Italy, on the eastern slope of the Colli Euganei; it is 10 kilometers southwest by rail from Padua."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bursa",
+                "match": [
+                    "Bursa () is a city in northwestern Turkey."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/The_Bahamas",
+                "match": [
+                    "The Bahamas, officially the Commonwealth of the Bahamas, is a country consisting of more than 3,000 islands, cays and islets in the Atlantic Ocean, north of Cuba and Hispaniola (the Dominican Republic and Haiti), northwest of the Turks and Caicos Islands, southeast of the U.S. state of Florida and east of the Florida Keys."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bangladesh",
+                "match": [
+                    "Bangladesh (,,;,), officially the People's Republic of Bangladesh ('), is a country in South Asia."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Barbados",
+                "match": [
+                    "Barbados (or) is a sovereign island country in the Lesser Antilles."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Alameda%2C_California",
+                "match": [
+                    "Alameda is a city in Alameda County, California, United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Accrington",
+                "match": [
+                    "Accrington is a town in the Hyndburn borough of Lancashire, England."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Alexandria%2C_Indiana",
+                "match": [
+                    "Alexandria is a city in Monroe Township, Madison County, Indiana, United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Alexandria%2C_Louisiana",
+                "match": [
+                    "Alexandria is a city in and the parish seat of Rapides Parish, Louisiana, United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Alexandria_Troas",
+                "match": [
+                    "Alexandria Troas (\"Alexandria of the Troad\", modern) is an ancient Greek city situated on the Aegean Sea near the northern tip of Turkey's western coast, a little south of Tenedos (modern Bozcaada)."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Alexandria%2C_West_Dunbartonshire",
+                "match": [
+                    "Alexandria (Scottish Gaelic: \"Am Magh Leamhna\", meaning the Plain of the Lennox, or \"Cathair Alastair\") is a town in West Dunbartonshire, Scotland."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Economy_of_Brunei",
+                "match": [
+                    "Brunei is a country with a small, wealthy economy that is a mixture of foreign and domestic entrepreneurship, government regulation and welfare measures, and village tradition."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Geography_of_Bulgaria",
+                "match": [
+                    "Bulgaria is a country situated in south-eastern Europe, bordering Romania, Serbia, the Republic of Macedonia, Greece, Turkey and the Black Sea."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Geography_of_Burkina_Faso",
+                "match": [
+                    "Burkina Faso (formerly Upper Volta) is a landlocked Sahel country that shares borders with six nations."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Economy_of_Burundi",
+                "match": [
+                    "Burundi is a landlocked, resource-poor country with an underdeveloped manufacturing sector."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Abadeh",
+                "match": [
+                    "Abadeh (, also Romanized as Abadeh) is a city in and the capital of Abadeh County, in Fars Province, Iran."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Abae",
+                "match": [
+                    "Abae (, Abai) is an ancient town in the northeastern corner of Phocis, in Greece."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Aveiro%2C_Portugal",
+                "match": [
+                    "Aveiro (or) is a city in Aveiro Municipality in Portugal, with a total area of 199.9 km2, a total population of 78,463 inhabitants, and 61,430 electors (2006)."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Anarcho-capitalism",
+                "match": [
+                    "Anarcho-capitalism (also referred to as free market anarchism, market anarchism, private-property anarchism Libertarian anarchism, and voluntaryism) is a libertarian political philosophy that advocates anarchy in the sense of the elimination of the state in favor of individual sovereignty in a free market."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Aachen",
+                "match": [
+                    "Aachen (, also known as Bad Aachen; Ripuarian: \"Oche\", Limburgish: \"Aoke\", French: \"Aix-La-Chapelle\") is a spa town in North Rhine-Westphalia, Germany."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bayonne",
+                "match": [
+                    "Bayonne (; Gascon Baiona;) is a city and commune in southwestern France at the confluence of the Nive and Adour rivers, in the Pyrenees-Atlantiques department, of which it is a sub-prefecture."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Ames%2C_Iowa",
+                "match": [
+                    "Ames is a city located in the central part of the U.S. state of Iowa in Story County."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Abensberg",
+                "match": [
+                    "Abensberg () is a town in the Lower Bavarian district of Kelheim, in Bavaria, Germany, lying around 30 km southwest of Regensburg, 40 km east of Ingolstadt, 50 northwest of Landshut and 100 km north of Munich."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Transport_in_Canada",
+                "match": [
+                    "Canada is a developed country whose economy includes the extraction and export of raw materials from its large area."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bihar_(disambiguation)",
+                "match": [
+                    "Bihar is a state in India."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Alicante",
+                "match": [
+                    "Alicante () or Alacant () is a city in Spain, the capital of the province of Alicante and of the comarca of Alacanti, in the south of the Valencian Community."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Advanced_Chemistry",
+                "match": [
+                    "Advanced Chemistry is a German hip hop group from Heidelberg, a scenic city in Baden-Wurttemberg, South Germany."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Ann_Arbor%2C_Michigan",
+                "match": [
+                    "Ann Arbor is a city in the US state of Michigan and the county seat of Washtenaw County."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Acropolis_of_Athens",
+                "match": [
+                    "The Acropolis of Athens (Greek:  ) is an ancient citadel located on a high rocky outcrop above the city of Athens and containing the remains of several ancient buildings of great architectural and historic significance, the most famous being the Parthenon."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Alaska",
+                "match": [
+                    "Alaska () is a state in the United States, situated in the northwest extremity of the North American continent, with the international boundary with Canada to the east, the Arctic Ocean to the north, and the Pacific Ocean to the west and south, with Russia further west across the Bering Strait."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Aberdeen_(disambiguation)",
+                "match": [
+                    "Aberdeen is a city in Scotland, United Kingdom."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Ballarat",
+                "match": [
+                    "Ballarat () is a city located on the Yarrowee River and lower western plains of the Great Dividing Range in the state of Victoria, Australia, approximately west-north-west of the state capital; Melbourne."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bletchley_Park",
+                "match": [
+                    "Bletchley Park is an estate located in the town of Bletchley, in Buckinghamshire, England, and is run by the Bletchley Park Trust as a heritage attraction."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Botswana",
+                "match": [
+                    "Botswana, officially the Republic of Botswana (), is a landlocked country located in Southern Africa."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Burkina_Faso",
+                "match": [
+                    "Burkina Faso (;), also known by its short-form name Burkina, is a landlocked country in west Africa around in size."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Geography_of_Botswana",
+                "match": [
+                    "Botswana is a landlocked country located in Southern Africa, north of South Africa."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bordeaux",
+                "match": [
+                    "Bordeaux (; Gascon: \"Bordeu\";) is a port city on the Garonne River in the Gironde department in southwestern France."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/American_Civil_Liberties_Union",
+                "match": [
+                    "The American Civil Liberties Union (ACLU) is a nonpartisan non-profit organization whose stated mission is \"to defend and preserve the individual rights and liberties guaranteed to every person in this country by the Constitution and laws of the United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Algeria",
+                "match": [
+                    "Algeria (,), Berber: Dzayer, , officially: the People's Democratic Republic of Algeria) is a country in North Africa on the Mediterranean coast."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Afyonkarahisar",
+                "match": [
+                    "Afyonkarahisar (, \"poppy, opium\", 'kara' \"black\", 'hisar' \"fortress\") is a city in western Turkey, the capital of Afyon Province."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Albania",
+                "match": [
+                    "Albania (,; Gheg Albanian: \"Shqipni/Shqipnia\"), officially known as the Republic of Albania (pronounced), is a country in Southeastern Europe."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Behistun_Inscription",
+                "match": [
+                    "The Behistun Inscription (also Bistun or Bisutun, Modern Persian:  < Old Persian: Bagastana, meaning \"the place of god\") is a multi-lingual inscription located on Mount Behistun in the Kermanshah Province of Iran, near the city of Kermanshah in western Iran."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Anah",
+                "match": [
+                    "Anah, or Ana, (Arabic: ) is an Iraqi town on the Euphrates river, approximately mid-way between the Gulf of Alexandretta and the Persian Gulf."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Albion%2C_Michigan",
+                "match": [
+                    "Albion is a city in Calhoun County in the south central region of the Lower Peninsula of the US state of Michigan."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bitola",
+                "match": [
+                    "Bitola (, also historically known as Monastir or Manastr; known also by several alternative names) is a city in the southwestern part of the Republic of Macedonia."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/AZ_(football_club)",
+                "match": [
+                    "AZ (), an initialism for Alkmaar Zaanstreek, is an association football club from the city of Alkmaar, Netherlands."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bonn",
+                "match": [
+                    "Bonn is a city on the banks of the Rhine River in the State of North Rhine-Westphalia, Germany."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bodmin",
+                "match": [
+                    "Bodmin () is a civil parish and major town in Cornwall, England, United Kingdom."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Berkeley%2C_California",
+                "match": [
+                    "Berkeley () is a city on the east shore of the San Francisco Bay in Northern California."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bali",
+                "match": [
+                    "Bali is a province in the country of Indonesia."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Abadan%2C_Iran",
+                "match": [
+                    "Abadan (, , also Romanized as Abadan) is a city in and the capital of Abadan County, Khuzestan Province, Iran."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bethlehem",
+                "match": [
+                    "Bethlehem (or ', lit \"House of Meat\"; ', Modern: ', lit \"House of Bread;\", [bthleem]) is a Palestinian city located in the central West Bank, neighboring south Jerusalem, with a population of about 25,000 people."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Angola",
+                "match": [
+                    "Angola, officially the Republic of Angola (,; Kikongo, Kimbundu, Umbundu: \"Repubilika ya Ngola\"), is a country in Southern Africa bordered by Namibia on the south, the Democratic Republic of the Congo on the north, and Zambia on the east; its west coast is on the Atlantic Ocean with Luanda as its capital city."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Belarus",
+                "match": [
+                    "Belarus (;, \"Bielarus\" ();, \"Belarus\"), officially the Republic of Belarus, is a landlocked country in Eastern Europe bordered by Russia to the northeast, Ukraine to the south, Poland to the west, and Lithuania and Latvia to the northwest."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Belize",
+                "match": [
+                    "Belize, is a country located on the north eastern coast of Central America."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Benin",
+                "match": [
+                    "Benin (, formerly Dahomey), officially the Republic of Benin (), is a country in West Africa."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bolivia",
+                "match": [
+                    "Bolivia (,), officially known as the Plurinational State of Bolivia (,), is a landlocked country located in central South America."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bosnia_and_Herzegovina",
+                "match": [
+                    "Bosnia and Herzegovina (; Bosnian and Croatian: \"Bosna i Hercegovina\", Serbian:   ), sometimes called Bosnia-Herzegovina or simply Bosnia, is a country in Southeastern Europe, on the Balkan Peninsula."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Geography_of_Armenia",
+                "match": [
+                    "Armenia is a landlocked country in the Transcaucasia region, between the Black and Caspian Seas, bordered on the north and east by Georgia and Azerbaijan and on the south and west by Iran and Turkey."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Boone%2C_North_Carolina",
+                "match": [
+                    "Boone is a town located in the Blue Ridge Mountains of western North Carolina, United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bulgaria",
+                "match": [
+                    "Bulgaria (,), officially the Republic of Bulgaria, is a country located in Southeastern Europe."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Alcoba%C3%A7a%2C_Portugal",
+                "match": [
+                    "Alcobaca () is a city in Alcobaca Municipality in Oeste Subregion, formerly included in the Estremadura Province."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Belgium",
+                "match": [
+                    "Belgium (), officially the Kingdom of Belgium, is a federal state in Western Europe."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Bamberg",
+                "match": [
+                    "Bamberg () is a city in Bavaria, Germany, located in Upper Franconia on the river Regnitz close to its confluence with the river Main."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Abercarn",
+                "match": [
+                    "Abercarn is a small town and community in Caerphilly county borough, Wales, 10 miles (16 km) north-west of Newport on the A467 between Cwmcarn and Newbridge, within the historic boundaries of Monmouthshire."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Aberdare",
+                "match": [
+                    "Aberdare () is a town in the Cynon Valley area of Rhondda Cynon Taf, Wales, at the confluence of the Rivers Dare (Dar) and Cynon."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Aberdeen%2C_South_Dakota",
+                "match": [
+                    "Aberdeen is a city in and the county seat of Brown County, South Dakota, United States, about 125 mi (200 km) northeast of Pierre."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Abergavenny",
+                "match": [
+                    "Abergavenny (), meaning \"Mouth of the River Gavenny\", is a market town in Monmouthshire, Wales."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Abertillery",
+                "match": [
+                    "__NOTOC__\nAbertillery (;,) is a town in the county borough of Blaenau Gwent in South Wales, north-west of Newport, originally on the Great Western Railway."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Czech_Republic",
+                "match": [
+                    "The Czech Republic (;, short form \"Cesko\"), is a landlocked country in Central Europe."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Essex",
+                "match": [
+                    "Essex () is a ceremonial and administrative county in England in the United Kingdom and is the home county northeast of the city of London."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Copacabana_(Rio_de_Janeiro)",
+                "match": [
+                    "Copacabana (local and standard or, rarely and in other Brazilian dialects) is a \"bairro\" (neighborhood) located in the Zona Sul (southern zone) of the city of Rio de Janeiro, Brazil."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Davenport%2C_Iowa",
+                "match": [
+                    "Davenport is a city located along the Mississippi River in Scott County, Iowa, United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Geography_of_Cambodia",
+                "match": [
+                    "Cambodia is a country in Southeastern Asia, bordering the Gulf of Thailand, between Thailand, Vietnam, and Laos."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Cameroon",
+                "match": [
+                    "Cameroon, officially the Republic of Cameroon (), is a country in west Central Africa."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Central_African_Republic",
+                "match": [
+                    "The Central African Republic (CAR;, or \"Centrafrique\"; Sango \"Kodorosese\" \"ti Beafrika\") is a landlocked country in Central Africa."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Eureka%2C_Missouri",
+                "match": [
+                    "Eureka is a city located in St. Louis County, Missouri, United States, between St. Louis and Pacific, Missouri, along Interstate 44."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/List_of_country_calling_codes",
+                "match": [
+                    "This is a list of country calling codes defined by ITU-T recommendations E.123 and E.164, also called IDD (International Direct Dialling) or ISD (International Subscriber Dialling) codes."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Commuter_rail",
+                "match": [
+                    "Commuter rail, also called suburban rail, is a passenger rail transport service that primarily operates between a city center, and the middle to outer suburbs beyond 15 km (10 miles) and commuter towns or other locations that draw large numbers of commuterspeople who travel on a daily basis."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Circuit_Park_Zandvoort",
+                "match": [
+                    "Circuit Park Zandvoort is a motorsport race track located in Burgemeester van Alphenstraat 108, 2041 KP in the dunes north of the town of Zandvoort, in the Netherlands, near the North Sea coast line."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/County_Mayo",
+                "match": [
+                    "County Mayo ()(Irish: Maigh Eo, meaning \"Plain of the yew trees\") is a county in Ireland."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/History_of_Colombia",
+                "match": [
+                    "This article deals with the history of Colombia, a country in South America."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Equatorial_Guinea",
+                "match": [
+                    "Equatorial Guinea, (), officially the Republic of Equatorial Guinea, (,), is a country located in Middle Africa."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Colorado_Springs%2C_Colorado",
+                "match": [
+                    "Colorado Springs is a Home Rule Municipality that is the county seat and most populous city of El Paso County, Colorado, United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Helsing%C3%B8r",
+                "match": [
+                    "Helsingr (; often known in English-speaking countries by Shakespeare's spelling Elsinore) is a city and the municipal seat of Helsingr Municipality on the northeast coast of the island of Zealand in eastern Denmark."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Enniskillen",
+                "match": [
+                    "Enniskillen (,) is a town and civil parish in County Fermanagh, Northern Ireland."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Geography_of_Denmark",
+                "match": [
+                    "Denmark is a Nordic country located in Northern Europe."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/History_of_Djibouti",
+                "match": [
+                    "Djibouti is a country located in the Horn of Africa."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Geography_of_Djibouti",
+                "match": [
+                    "Djibouti is a country in the Horn of Africa."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Cornwall",
+                "match": [
+                    "Cornwall (or;) is a unitary authority and ceremonial county of England, within the United Kingdom."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Delft",
+                "match": [
+                    "Delft (,) is a city and municipality in the province of South Holland (Zuid-Holland), in the Netherlands."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Dubnium",
+                "match": [
+                    "Dubnium is a chemical element with the symbol Db and atomic number 105, named after the town of Dubna in Russia, where it was first produced."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/China",
+                "match": [
+                    "China (;; see also Names of China), officially the People's Republic of China (PRC), is a country located in East Asia."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Dedham%2C_Massachusetts",
+                "match": [
+                    "Dedham () is a town in and the county seat of Norfolk County, Massachusetts, United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/HM_Prison_Dartmoor",
+                "match": [
+                    "HM Prison Dartmoor is a Category C men's prison, located in Princetown, high on Dartmoor in the English county of Devon."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Danish_language",
+                "match": [
+                    "Danish (\"dansk,\"; \"dansk sprog\",) is a North Germanic language spoken by around six million people, principally in the country of Denmark and in the region of Southern Schleswig in northern Germany, where it holds minority language status."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Dimona",
+                "match": [
+                    "Dimona () is an Israeli city in the Negev desert, to the south of Beersheba and west of the Dead Sea above the Arava valley in the Southern District of Israel."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Davis%2C_California",
+                "match": [
+                    "Davis is a city in Yolo County, California, United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Cyprus",
+                "match": [
+                    "Cyprus (, \"Kypros\",;,), officially the Republic of Cyprus (, \"Kypriaki Dimokratia\",;,), is an island country in the Eastern Mediterranean Sea, east of Greece, south of Turkey, west of Syria, Lebanon, northwest of Israel and north of Egypt."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Cleveland",
+                "match": [
+                    "Cleveland () is a city in the U.S. state of Ohio and is the county seat of Cuyahoga County, the most populous county in the state."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Chernobyl_(city)",
+                "match": [
+                    "Chernobyl (or Chornobyl (,;,) is an abandoned city in the restricted Chernobyl Exclusion Zone situated in northern Kiev Oblast, Ukraine near the border with Belarus."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Coca-Cola",
+                "match": [
+                    "Coca-Cola is a carbonated soft drink sold in stores, restaurants, and vending machines in every country except Cuba and North Korea."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Dolly_Parton",
+                "match": [
+                    "Dolly Rebecca Parton (born January 19, 1946) is an American singer-songwriter, multi-instrumentalist, actress, author, and philanthropist, best known for her work in country music."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Geography_of_Ecuador",
+                "match": [
+                    "Ecuador is a country in western South America, bordering the Pacific Ocean at the Equator, for which the country is named."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Costa_Rica",
+                "match": [
+                    "Costa Rica (, meaning \"rich coast\" in Spanish), officially the Republic of Costa Rica (or ',), is a country in Central America, bordered by Nicaragua to the north, Panama to the southeast, the Pacific Ocean to the west, and the Caribbean Sea to the east."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/County_Dublin",
+                "match": [
+                    "County Dublin (or \"Contae Atha Cliath\") is a county in Ireland."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Dartmouth%2C_Devon",
+                "match": [
+                    "Dartmouth is a town and civil parish in the English county of Devon."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Cheddar",
+                "match": [
+                    "Cheddar is a large village and civil parish in the Sedgemoor district of the English county of Somerset."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Chojn%C3%B3w",
+                "match": [
+                    "Chojnow () is a small town in Legnica County, Lower Silesian Voivodeship, in south-western Poland."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Ceuta",
+                "match": [
+                    "Ceuta () () is an autonomous city of Spain and an exclave located on the north coast of Africa, sharing a western border with Morocco."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Cedar_Falls%2C_Iowa",
+                "match": [
+                    "Cedar Falls is a city in Black Hawk County, Iowa, United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Elbl%C4%85g",
+                "match": [
+                    "Elblag () is a city in northern Poland with 124,257 inhabitants (December 31, 2011)."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Economy_of_Equatorial_Guinea",
+                "match": [
+                    "Equatorial Guinea is a small country at the west coast of Central Africa."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Eindhoven",
+                "match": [
+                    "Eindhoven () is a municipality and a city located in the province of North Brabant in the south of the Netherlands, originally at the confluence of the Dommel and Gender streams."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Chad",
+                "match": [
+                    "Chad (';), officially the Republic of Chad, is a landlocked country in Central Africa."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Chile",
+                "match": [
+                    "Chile (or), officially the Republic of Chile (,), is a country in South America occupying a long, narrow strip of land between the Andes mountains to the east and the Pacific Ocean to the west."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Devon",
+                "match": [
+                    "Devon (; archaically known as Devonshire) is a county of England, reaching from the Bristol Channel in the north to the English Channel in the south."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Geography_of_the_Dominican_Republic",
+                "match": [
+                    "The Dominican Republic (Spanish: \"Republica Dominicana\") is a country in the West Indies that occupies the eastern two-thirds of Hispaniola."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Cadillac%2C_Michigan",
+                "match": [
+                    "Cadillac () is a city in the U.S. state of Michigan and is the county seat of Wexford County."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Edinburgh",
+                "match": [
+                    "Edinburgh (; Scottish Gaelic: \"Dun Eideann\") is a city in the south-east of Scotland, on the southern shore of the Firth of Forth with a population of 495,360 in 2011 (up 1.9% from 2010)."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Ellensburg%2C_Washington",
+                "match": [
+                    "Ellensburg is a city in, and the county seat of, Kittitas County, Washington, United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Eugene%2C_Oregon",
+                "match": [
+                    "Eugene () is a major city of the Pacific Northwest located in the state of Oregon."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Columbus%2C_Indiana",
+                "match": [
+                    "Columbus () is a city in and the county seat of Bartholomew County, Indiana, United States."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Corinth",
+                "match": [
+                    "Corinth (Greek , \"Korinthos\") () is a city and former municipality in Corinthia, Peloponnese, Greece."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Cambridge%2C_Massachusetts",
+                "match": [
+                    "Cambridge is a city in Middlesex County, Massachusetts, United States, in the Greater Boston area."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Dachau",
+                "match": [
+                    "Dachau () is a town in Upper Bavaria, in the southern part of Germany (Dokow in English)."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/History_of_Chad",
+                "match": [
+                    "Chad (;), officially the Republic of Chad, is a landlocked country in Central Africa."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Geography_of_Chad",
+                "match": [
+                    "Chad is a land-locked country in north central Africa measuring, roughly three times the size of California."
+                ]
+            },
+            {
+                "url": "http://en.wikipedia.org/wiki/Carson_City%2C_Nevada",
+                "match": [
+                    "Carson City, officially the Consolidated Municipality of Carson City, is an independent city and the capital of the state of Nevada."
+                ]
+            }
+        ],
+        "total": 131
+    }
+}

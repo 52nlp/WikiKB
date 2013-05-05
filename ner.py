@@ -26,10 +26,10 @@ def initPattern():
   height = re.compile("")
 
   #August 14, 2003 -- August 14th, 2003
-  date1 = re.compile("(([J|j]anuary|[F|f]ebruary|[m|M]arch|[a|A]pril|[m|M]ay|[j|J]une|[j|J]uly|[a|A]ugust|[s|S]eptember|[o|O]ctober|[n|N]ovember|[d|D]ecember) ([0-9]{2}|[0-9]{1})[ ]?[,][ ]?(([0-9]{4})|([0-9]+ (B.C.|BC|A.D.|AD))))")
+  date1 = re.compile("(([J|j]anuary|[F|f]ebruary|[m|M]arch|[a|A]pril|[m|M]ay|[j|J]une|[j|J]uly|[a|A]ugust|[s|S]eptember|[o|O]ctober|[n|N]ovember|[d|D]ecember) ([0-9]{2}|[0-9]{1})[ ]?[,]?[ ]?(([0-9]{4})|([0-9]+ (B.C.|BC|A.D.|AD))))")
 
   #14th August, 1956
-  date2 = re.compile("(([0-9]{2}|[0-9]{1})([a-zA-Z]{2})? ([J|j]anuary|[F|f]ebruary|[m|M]arch|[a|A]pril|[m|M]ay|[j|J]une|[j|J]uly|[a|A]ugust|[s|S]eptember|[o|O]ctober|[n|N]ovember|[d|D]ecember)[ ]?[,][ ]?(([0-9]{4})|([0-9]+ (B.C.|BC|A.D.|AD))))")
+  date2 = re.compile("(([0-9]{2}|[0-9]{1})([a-zA-Z]{2})? ([J|j]anuary|[F|f]ebruary|[m|M]arch|[a|A]pril|[m|M]ay|[j|J]une|[j|J]uly|[a|A]ugust|[s|S]eptember|[o|O]ctober|[n|N]ovember|[d|D]ecember)[ ]?[,]?[ ]?(([0-9]{4})|([0-9]+ (B.C.|BC|A.D.|AD))))")
 
   pats = {"DISTANCE":[pattern6],"TIME":[pattern3],"AREA":[pattern7],"VOLUME":[pattern8],"CURRENCY":[pattern9,pattern10],"DATE":[date1,date2,pattern,pattern4,pattern5,year],"EMAIL":[pattern2]}#,"URL":[pattern11]}
   return pats
@@ -50,4 +50,4 @@ def findPattern(sent,pat,st):
 
 if __name__ == "__main__":
   pat = initPattern()
-  print findPattern("dfsdfsdf 14 August, 1897 dfssf",pat,"DATE")
+  print findPattern("dfsdfsdf 14 August 1897 dfssf",pat,"DATE")

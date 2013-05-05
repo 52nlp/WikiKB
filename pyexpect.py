@@ -23,8 +23,11 @@ def initTries(trie_dict):
 
 		v_arr = pyannotate.toLowerCase(v_arr)
 		tries_all[unicode(k,errors="ignore")] = marisa_trie.Trie(v_arr)
-	
-	tries_all["PERSON"] = marisa_trie.Trie().load("person.marisa")
+	for name in tries_all:
+		try:
+			tries_all[name] = marisa_trie.Trie().load(name+".marisa")
+		except:
+			pass
 	#print tries_all
 
 #get trie based on the pattern
@@ -120,7 +123,7 @@ def createAnnotations(parts,patterns):
 			pat = pat[2:l]
 
 			if patterns[i][1] == "@":
-				print pat
+				#print pat
 				if pat.find("_") > -1:
 					pat = pat[:len(pat)-2]
 				pats = initPattern()
@@ -176,6 +179,9 @@ def breakRelations(all_relations):
 	#print all_relations
 	for rel in all_relations:
 		#print "relation",rel
+		rel["e1"] = list(set(rel["e1"]))
+		rel["e2"] = list(set(rel["e2"]))
+
 		for i in range(len(rel["e1"])):
 			for j in range(len(rel["e2"])):
 				big_relation_store.append({"e1":rel["e1"][i], "rel":rel["rel"], "e2":rel["e2"][j]})
@@ -207,7 +213,7 @@ def createRelations(annotations,pat,relations):
 					p = p[1:len(p)-1]
 				classMap[p] = i
 
-	print "classMap",classMap
+	#print "classMap",classMap
 	
 
 	all_relations = []
@@ -250,9 +256,9 @@ def createRelations(annotations,pat,relations):
 	return True,all_relations
 
 #init function
-def extract_init(sent):
+def extract_init(exp,sent):
 	
-	exp = readJson()
+	
 	if DEBUG:
 		print "json object = ",exp
 
@@ -275,12 +281,12 @@ def extract_init(sent):
 
 			parts =  partition(sent,pat)
 
-			print parts,len(parts)
-			print pat,len(pat)
+			#print parts,len(parts)
+			#print pat,len(pat)
 
 			if len(parts) == len(pat):
 				ok,annotations = createAnnotations(parts,pat)
-				print annotations
+				#print annotations
 				if not ok:
 					continue
 				ok,extracts = createRelations(annotations,pat,relations)
@@ -319,9 +325,10 @@ if __name__ == '__main__':
 	persons = ["Bill Gates"]
 	authors = ["Charles Dickens"]
 	books = ["A Christmas Carol",""]
+	location = ["Seattle"]
 	company = ["Microsoft","Apple Inc","Apple","Mcafee","Amazon.com","Intel","Google","Nvidia","AMD","Oracle","Sun Microsystems"]
 
-	trie = {"PERSON":persons, "BOOK":books, "AUTHOR":authors, "COMPANY":company}
+	trie = {"PERSON":persons, "BOOK":books, "AUTHOR":authors, "COMPANY":company, "LOCATION":location}
 	
 	#test annotation
 	ptrie = marisa_trie.Trie(pyannotate.toLowerCase(persons))
@@ -332,11 +339,15 @@ if __name__ == '__main__':
 	start,end = getIndices(sent,"[C|c]arol")
 	#print start, end
 
+	#read JSON
+	exp = readJson()
+
 	#main
 	initTries(trie)
 	
+	"""
 	sent = "Bill Gates was born in August 14, 1897 - December 14, 1945. He founded Microsoft"
-	extract_init(sent)
+	extract_init(exp,sent)
 
 	"""
 	in_file = open(sys.argv[1],"r")
@@ -346,8 +357,8 @@ if __name__ == '__main__':
 		text = jline["text"]
 		#print "URL: ",url
 		for txt in text:
-			#if txt.find("Steve Jobs") > -1:
-			#	print "text: ",txt
-			extract_init(txt)
+			#if txt.find("Bill Gates") > -1:
+				#print "text: ",txt
+			extract_init(exp,txt)
 	
-	"""
+	

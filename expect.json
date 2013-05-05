@@ -21,7 +21,7 @@
 				"[$COMPANY],[established on],[$PERSON]+"
 			],
 			"relations":[
-				"$PERSON--founded--$COMPANY"
+				"$PERSON--created--$COMPANY"
 			]
 			
 		},
@@ -30,7 +30,7 @@
 				"[$COMPANY],[CEO],[$PERSON]"
 			],
 			"relations":[
-				"$PERSON--CEOOf--$COMPANY"
+				"$PERSON--isCEO--$COMPANY"
 			]
 			
 		},
@@ -39,7 +39,7 @@
 				"[$PERSON],[born],[@DATE]"
 			],
 			"relations":[
-				"$PERSON--bornOn--@DATE"
+				"$PERSON--wasBornOn--@DATE"
 			]
 		},
 		{
@@ -47,7 +47,6 @@
 				"[$PERSON],[born],[@DATE],[-],[@DATE_1]"
 			],
 			"relations":[
-				"$PERSON--bornOn--@DATE",
 				"$PERSON--diedOn--@DATE_1"
 			]
 		}

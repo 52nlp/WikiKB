@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<title>Syntax Highlighting</title>
+<head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+  <script type="text/javascript">
+    function run(){
+      //alert("hello")
+      data = "hi";
+      ta = document.getElementById("txt");
+      new_data = data;
+      text = $('#txt').html();
+      //alert(text);
+      $('#txt').html(text.replace(new_data ,"<b>"+data+"</b>"));
+
+      //console.log(text.replace(new_data ,"<b>"+data+"</b>"))
+      setTimeout(run,1000);
+    }
+  </script>
+</head>
+<body onload="run()">
+<div contenteditable="true" id="txt">
+Hello hi hello
+</div>
+<button onclick="">Highlight</button>
+</body>

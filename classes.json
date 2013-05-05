@@ -1,15 +1,14 @@
 {
 	"classes":[
 		{
-			"name":"AUTHOR",
+			"name":"LOCATION",
 			"type":"REGEXPATTERN",
 			"start":0,
 			"end":2,
 			"pattern-or":[
-				" (was|is) (a|an)[ ]*[a-zA-Z]*[ ]*(writer|novelist) "
+				"is a.*( state in | country | county | city | town )"
 			],
 			"pattern-not":[
-				"is (a|an)(.*)(nove[l|la]|book)(.*)(of|by)"
 			],
 			"pattern-and":[
 			]

@@ -1,0 +1,62 @@
+{
+	"expectations":[
+		{
+			"patterns":[
+				"[$BOOK]+,[written by],[$AUTHOR]",
+				"[$AUTHOR],[wrote],[$BOOK]+",
+				"[$BOOK],[by],[$AUTHOR]"
+			],
+			"relations":[
+				"$BOOK--writtenBy--$AUTHOR",
+				"$AUTHOR--isA--Writer"
+			]
+			
+		},
+		{
+			"patterns":[
+				"[$PERSON],[co-founded],[$COMPANY]",
+				"[$COMPANY],[co-founder],[$PERSON]",
+				"[$PERSON],[the founder of],[$COMPANY]",
+				"[$PERSON],[founded],[$COMPANY]",
+				"[$COMPANY],[established on],[$PERSON]+"
+			],
+			"relations":[
+				"$PERSON--created--$COMPANY"
+			]
+			
+		},
+		{
+			"patterns":[
+				"[$COMPANY],[CEO],[$PERSON]"
+			],
+			"relations":[
+				"$PERSON--isCEO--$COMPANY"
+			]
+			
+		},
+		{
+			"patterns":[
+				"[$PERSON],[born],[@DATE]"
+			],
+			"relations":[
+				"$PERSON--wasBornOn--@DATE"
+			]
+		},
+		{
+			"patterns":[
+				"[$PERSON],[born],[@DATE],[-],[@DATE_1]"
+			],
+			"relations":[
+				"$PERSON--diedOn--@DATE_1"
+			]
+		},
+		{
+			"patterns":[
+				"[$PERSON],[born at],[$LOCATION]"
+			],
+			"relations":[
+				"$PERSON--bornAt--$LOCATION"
+			]
+		}
+	]
+}

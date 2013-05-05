@@ -1,0 +1,7 @@
+digraph G {
+"albert einstein" -> "March 14, 1879" [ label= "wasBornOn"];
+"albert einstein" -> "April 18, 1955" [ label= "diedOn"];
+"bill gates" -> "microsoft" [ label= "created"];
+"a christmas carol" -> "charles dickens" [ label= "writtenBy"];
+"charles dickens" -> "Writer" [ label= "isA"];
+}

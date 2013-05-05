@@ -1,0 +1,32 @@
+2013-04-21T14:23:12.848937575 0.024114s info: Creating directory rethinkdb_data
+2013-04-21T14:23:12.852590812 0.027768s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory 'rethinkdb_data' did not already exist.)
+2013-04-21T14:23:12.852657964 0.027834s info: Running rethinkdb 1.4.4-0ubuntu1~quantal (GCC 4.7.2)...
+2013-04-21T14:23:12.854012138 0.029189s info: Running on Linux 3.5.0-27-generic i686
+2013-04-21T14:23:12.854051226 0.029228s info: Loading data from directory rethinkdb_data
+2013-04-21T14:23:13.342586078 0.517763s info: Listening for intracluster connections on port 37903
+2013-04-21T14:23:13.344570576 0.519747s info: Listening for client driver connections on port 36903
+2013-04-21T14:23:13.344586834 0.519763s info: Listening for administrative HTTP connections on port 16968
+2013-04-21T14:23:13.344588322 0.519765s info: Listening on addresses: 127.0.0.1, 127.0.1.1
+2013-04-21T14:23:13.344589196 0.519766s info: To fully expose RethinkDB on the network, bind to all addresses
+2013-04-21T14:23:13.344590375 0.519767s info: by running rethinkdb with the `--bind all' command line option.
+2013-04-21T14:23:13.344591215 0.519768s info: Server ready
+2013-04-21T14:23:51.544037492 38.719214s info: Applying data {"databases":{"72876830-3312-4737-9209-c30d5b0852f7":null}}
+2013-04-21T14:23:56.449145209 43.624322s info: Applying data {"databases":{"new":{"name":"wikikb"}}}
+2013-04-21T14:24:01.894386049 49.069563s info: Applying data {"rdb_namespaces":{"new":{"name":"demo","primary_uuid":"00000000-0000-0000-0000-000000000000","database":"f716b5f0-7bca-4b4d-85e7-8b3af5d9dd5d","ack_expectations":{"00000000-0000-0000-0000-000000000000":1}}}}
+2013-04-21T14:56:25.439787280 1992.614964s info: Applying data {"rdb_namespaces":{"8ff84c38-bb5a-422c-a913-b973fdd6a5a3":null}}
+2013-04-21T14:56:29.413336536 1996.588513s info: Applying data {"rdb_namespaces":{"new":{"name":"demo","primary_uuid":"00000000-0000-0000-0000-000000000000","database":"f716b5f0-7bca-4b4d-85e7-8b3af5d9dd5d","ack_expectations":{"00000000-0000-0000-0000-000000000000":1}}}}
+2013-04-21T18:29:43.298514082 14790.473691s info: Applying data {"rdb_namespaces":{"624ba674-9b92-4cb3-ba4f-57482747e74b":null}}
+2013-04-21T18:29:47.066548061 14794.241725s info: Applying data {"rdb_namespaces":{"new":{"name":"demo","primary_uuid":"00000000-0000-0000-0000-000000000000","database":"f716b5f0-7bca-4b4d-85e7-8b3af5d9dd5d","ack_expectations":{"00000000-0000-0000-0000-000000000000":1}}}}
+2013-04-21T21:30:00.464769869 25607.639946s info: Applying data {"rdb_namespaces":{"de5afda9-d171-4ad4-8147-6a8ecc0e282c":null}}
+2013-04-21T21:30:03.828189466 25611.003366s info: Applying data {"rdb_namespaces":{"new":{"name":"demo","primary_uuid":"00000000-0000-0000-0000-000000000000","database":"f716b5f0-7bca-4b4d-85e7-8b3af5d9dd5d","ack_expectations":{"00000000-0000-0000-0000-000000000000":1}}}}
+2013-04-22T01:46:14.854289656 40982.029466s info: Applying data {"rdb_namespaces":{"ec2158fe-9717-40e9-9672-eb8817904c7c":null}}
+2013-04-22T01:46:21.017707747 40988.192884s info: Applying data {"rdb_namespaces":{"new":{"name":"demo","primary_uuid":"00000000-0000-0000-0000-000000000000","database":"f716b5f0-7bca-4b4d-85e7-8b3af5d9dd5d","ack_expectations":{"00000000-0000-0000-0000-000000000000":1}}}}
+2013-04-22T01:46:24.999564787 40992.174742s info: Applying data {"rdb_namespaces":{"new":{"name":"demo1","primary_uuid":"00000000-0000-0000-0000-000000000000","database":"f716b5f0-7bca-4b4d-85e7-8b3af5d9dd5d","ack_expectations":{"00000000-0000-0000-0000-000000000000":1}}}}
+2013-04-22T01:46:29.280310151 40996.455487s info: Applying data {"rdb_namespaces":{"new":{"name":"demo2","primary_uuid":"00000000-0000-0000-0000-000000000000","database":"f716b5f0-7bca-4b4d-85e7-8b3af5d9dd5d","ack_expectations":{"00000000-0000-0000-0000-000000000000":1}}}}
+2013-04-22T01:46:32.495297079 40999.670474s info: Applying data {"rdb_namespaces":{"new":{"name":"demo3","primary_uuid":"00000000-0000-0000-0000-000000000000","database":"f716b5f0-7bca-4b4d-85e7-8b3af5d9dd5d","ack_expectations":{"00000000-0000-0000-0000-000000000000":1}}}}
+2013-04-22T01:46:36.746179665 41003.921356s info: Applying data {"rdb_namespaces":{"new":{"name":"demo4","primary_uuid":"00000000-0000-0000-0000-000000000000","database":"f716b5f0-7bca-4b4d-85e7-8b3af5d9dd5d","ack_expectations":{"00000000-0000-0000-0000-000000000000":1}}}}
+2013-04-22T16:50:55.487748014 80528.706431s info: Server got SIGINT; shutting down...
+2013-04-22T16:50:55.487861681 80528.706545s info: Shutting down client connections...
+2013-04-22T16:50:55.487991718 80528.706675s info: All client connections closed.
+2013-04-22T16:50:55.487995054 80528.706678s info: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2013-04-22T16:50:55.505064171 80528.723747s info: Storage engine shut down.
