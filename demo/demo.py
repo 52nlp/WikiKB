@@ -384,7 +384,7 @@ def main(demo):
 		#print sent
 		texts = tokenizer.tokenize(sent["text"])
 		for text in texts:
-			sent = resolveRedirection(text,title)
+			text = resolveRedirection(text,title)
 			for rel in extract_init(patterns,text,demo):
 				print rel
 				saveToFile(rel,dot_file)
